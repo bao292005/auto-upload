@@ -1,0 +1,5 @@
+2026-03-20 21:20:05,347 - __main__ - INFO - Starting Auto Upload Shorts CLI
+2026-03-20 21:20:05,349 - src.db_manager - INFO - Database initialized and connected at history.sqlite
+2026-03-20 21:20:05,350 - src.android_auto - INFO - Connecting to Android device/LDPlayer at localhost:5555...
+2026-03-20 21:20:05,352 - src.android_auto - ERROR - Failed to connect: No adb exe could be found. Install adb on your system
+2026-03-20 21:20:05,352 - __main__ - ERROR - Could not connect to LDPlayer device. Stop.
