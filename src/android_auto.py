@@ -7,9 +7,9 @@ import os
 logger = logging.getLogger(__name__)
 
 class YouTubeUploader:
-    def __init__(self, serial="localhost:5555"):
+    def __init__(self, serial="127.0.0.1:5555"):
         self.serial = serial
-        self.d = None
+        self.d = None  # should be injected/assigned after external connect
         self.titles_cache = []
         self._load_titles()
 
@@ -23,7 +23,7 @@ class YouTubeUploader:
     def connect(self):
         """Connect to device"""
         try:
-            logger.info(f"Connecting to Android device/LDPlayer at {self.serial}...")
+            logger.info(f"Connecting to Android device/emulator at {self.serial}...")
             self.d = u2.connect(self.serial)
             logger.info("Connected successfully.")
         except Exception as e:
@@ -49,7 +49,7 @@ class YouTubeUploader:
         except Exception as e:
             pass
 
-    def upload_short(self, image_path: str, is_dry_run: bool = False) -> bool:
+    def upload_short(self, image_path: str, is_dry_run: bool = False, target_seconds: int = 5) -> bool:
         """
         Main UI flow to upload an image as a YouTube Short.
         Returns True if successful, False otherwise.
@@ -67,20 +67,24 @@ class YouTubeUploader:
 
             # Start YouTube app
             logger.info("Opening YouTube app...")
-            self.d.app_start("com.google.android.youtube", use_monkey=True)
-            self.d.wait_activity(None, timeout=5) # Wait for it to settle
+            # Prefer stable start without monkey for determinism; rely on healthcheck done earlier
+            self.d.app_start("com.google.android.youtube")
+            try:
+                self.d.wait_activity(None, timeout=5)  # best effort settle
+            except Exception:
+                pass
 
             self.handle_popups()
 
-            # Click standard Create/Add button (Usually a plus icon at bottom)
-            # Find by content desc "Create" or "Tạo" 
+            # Click standard Create/Add button (prefer content-desc/resource-id for en-US)
             logger.info("Clicking Create (+) button...")
-            create_btn_desc = "Create"
-            if not self.d(descriptionContains=create_btn_desc).exists(timeout=3):
-                create_btn_desc = "Tạo" # fallback to vietnamese
-            
-            if self.d(descriptionContains=create_btn_desc).exists(timeout=5):
-                self.d(descriptionContains=create_btn_desc).click(timeout=2)
+            # Try common resource-id if available; otherwise content-desc contains "Create"
+            create_btn = self.d(descriptionContains="Create")
+            if not create_btn.exists(timeout=3):
+                # Fallback to Vietnamese if UI language diverges
+                create_btn = self.d(descriptionContains="Tạo")
+            if create_btn.exists(timeout=5):
+                create_btn.click(timeout=2)
             else:
                 logger.error("Could not find Create button.")
                 return False
@@ -103,12 +107,38 @@ class YouTubeUploader:
             time.sleep(2)
             # Pick from gallery
             logger.info("Picking image from gallery...")
-            # We assume clicking the bottom-left gallery thumbnail
-            gallery_btn = self.d(resourceId="com.google.android.youtube:id/gallery_button")
-            if gallery_btn.exists(timeout=3):
-                gallery_btn.click()
-            else:
-                logger.error("Could not find gallery button.")
+            # Try multiple selectors commonly seen in YouTube Shorts UI
+            candidates = [
+                self.d(resourceId="com.google.android.youtube:id/gallery_button"),
+                self.d(resourceId="com.google.android.youtube:id/shorts_gallery_button"),
+                self.d(descriptionContains="Gallery"),
+                self.d(textContains="Gallery"),
+                self.d(descriptionContains="Import"),
+                self.d(textContains="Import"),
+            ]
+            clicked = False
+            for el in candidates:
+                if el.exists(timeout=2):
+                    el.click()
+                    clicked = True
+                    break
+            if not clicked:
+                # Fallback: in Shorts camera, bottom-left thumbnail opens gallery
+                try:
+                    w, h = self.d.window_size()
+                    self.d.click(int(w * 0.15), int(h * 0.85))
+                    clicked = True
+                except Exception:
+                    pass
+            if not clicked:
+                # Dump UI to help refine selectors on this device
+                try:
+                    xml = self.d.dump_hierarchy()
+                    with open("ui_dump_gallery.xml", "w", encoding="utf-8") as f:
+                        f.write(xml)
+                    logger.error("Could not find gallery button. Dumped UI to ui_dump_gallery.xml")
+                except Exception:
+                    logger.error("Could not find gallery button.")
                 return False
 
             # Select the newly pushed image (usually first item in recent)
@@ -127,6 +157,13 @@ class YouTubeUploader:
             # Click Done/Tiếp
             time.sleep(2)
             logger.info("Clicking Done/Next after selection...")
+            done_btn = self.d(text="Next")
+            if not done_btn.exists(timeout=1): done_btn = self.d(text="Tiep theo")
+            if done_btn.exists(timeout=2): done_btn.click()
+
+            # Click Done/Tiếp
+            time.sleep(2)
+            logger.info("Clicking Done/Next after selection...")
             done_btn = self.d(text="Done")
             if not done_btn.exists(timeout=1): done_btn = self.d(text="Xong")
             if done_btn.exists(timeout=2): done_btn.click()
@@ -134,18 +171,44 @@ class YouTubeUploader:
             # Add music
             logger.info("Adding trending music...")
             music_btn = self.d(descriptionContains="Add sound")
-            if not music_btn.exists(timeout=1): music_btn = self.d(textContains="Add sound")
+            if not music_btn.exists(timeout=1): music_btn = self.d(textContains("Add sound"))
+            if not music_btn.exists(timeout=1): music_btn = self.d(text("Sound"))
             if music_btn.exists(timeout=2):
                 music_btn.click()
                 time.sleep(2)
                 # Just pick the first trending song
                 first_song = self.d(resourceId="com.google.android.youtube:id/music_track_title")
+                if not first_song.exists(timeout=2):
+                    first_song = self.d(xpath="//android.widget.TextView[contains(@text,'Trending')]/../following-sibling::*[1]//android.widget.TextView[1]")
                 if first_song.exists(timeout=5):
                     first_song.click()
                     # Click the arrow to confirm the song
                     confirm_btn = self.d(resourceId="com.google.android.youtube:id/confirm_button")
                     if confirm_btn.exists(timeout=2): confirm_btn.click()
-            
+
+            # Best-effort set duration ~target_seconds on the trim/timeline screen
+            try:
+                logger.info(f"Setting clip duration to ~{target_seconds}s (best-effort)...")
+                # Look for a timeline/slider; try common resource-ids or class names
+                timeline = self.d(resourceId="com.google.android.youtube:id/trim_timeline")
+                if not timeline.exists(timeout=1):
+                    timeline = self.d(className="android.widget.SeekBar")
+                if timeline.exists(timeout=2):
+                    # Heuristic: drag the right edge handle to approximate length
+                    w, h = self.d.window_size()
+                    # Drag from ~80% width to ~20% width based on desired seconds (rough heuristic)
+                    # Many UIs map 15s full length; scale by target_seconds/15
+                    full = 0.8
+                    frac = max(0.1, min(1.0, target_seconds / 15.0))
+                    start_x = int(w * (0.2 + full * frac))
+                    end_x = int(w * 0.2)
+                    y = int(h * 0.6)
+                    self.d.drag(start_x, y, end_x, y, 0.2)
+                else:
+                    logger.info("No timeline/slider found; skipping duration adjustment.")
+            except Exception as e:
+                logger.warning(f"Duration adjust skipped due to error: {e}")
+
             # Click Next/Tiếp
             next_btn = self.d(text="Next")
             if not next_btn.exists(timeout=1): next_btn = self.d(text="Tiếp")

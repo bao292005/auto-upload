@@ -6,7 +6,7 @@ import sys
 from src.drive_sync import download_and_filter
 from src.db_manager import DBManager
 from src.android_auto import YouTubeUploader
-
+from src.device import connect_device
 # Configure logging
 logging.basicConfig(
     level=logging.INFO,
@@ -19,17 +19,35 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 def parse_args():
-    parser = argparse.ArgumentParser(description="Auto Upload Shorts qua LDPlayer MVP")
+    parser = argparse.ArgumentParser(description="Auto Upload Shorts qua BlueStacks/Emulator")
     parser.add_argument(
-        "--drive-url", 
-        type=str, 
-        required=True, 
-        help="Shareable link of the Google Drive folder containing images"
+        "--drive-url",
+        type=str,
+        required=False,
+        help="Shareable link of the Google Drive folder containing images",
     )
     parser.add_argument(
-        "--dry-run", 
-        action="store_true", 
-        help="Run without clicking the upload button on YouTube"
+        "--local-dir",
+        type=str,
+        required=False,
+        help="Local directory containing images (.png/.jpg/.jpeg). If set, overrides --drive-url.",
+    )
+    parser.add_argument(
+        "--dry-run",
+        action="store_true",
+        help="Run without clicking the upload button on YouTube",
+    )
+    parser.add_argument(
+        "--adb-serial",
+        type=str,
+        default=os.getenv("ADB_SERIAL"),
+        help="ADB serial (e.g., 127.0.0.1:5555). Overrides ADB_SERIAL env if provided.",
+    )
+    parser.add_argument(
+        "--target-seconds",
+        type=int,
+        default=5,
+        help="Target clip duration in seconds (best-effort; default 5)",
     )
     return parser.parse_args()
 
@@ -45,18 +63,38 @@ def main():
     db = DBManager()
     
     # Init UI Automator
-    uploader = YouTubeUploader(serial="localhost:5555")
-    try:
-        uploader.connect()
-    except Exception as e:
-        logger.error("Could not connect to LDPlayer device. Stop.")
+    serial = args.adb_serial
+    if not serial:
+        logger.error("No ADB serial provided. Use --adb-serial or set ADB_SERIAL env.")
         sys.exit(1)
+
+    try:
+        d = connect_device(serial)
+    except Exception:
+        logger.error("Could not connect to Android device/emulator. Stop.")
+        sys.exit(1)
+
+    uploader = YouTubeUploader(serial=serial)
+    uploader.d = d
         
-    # Phase 1: Download & Filter
-    valid_images = download_and_filter(args.drive_url, temp_dir)
-    
+    # Phase 1: Collect images (local preferred for speed if provided)
+    valid_images = []
+    if args.local_dir:
+        try:
+            from src.local_scan import scan_local_images
+            valid_images = scan_local_images(args.local_dir, max_files=5)
+            logger.info(f"Loaded {len(valid_images)} images from local dir: {args.local_dir}")
+        except Exception as e:
+            logger.error(f"Failed to scan local dir {args.local_dir}: {e}")
+    elif args.drive_url:
+        # Limit downloads per run for testing/perf; adjust as needed
+        valid_images = download_and_filter(args.drive_url, temp_dir, max_files=5)
+    else:
+        logger.error("Please provide either --local-dir or --drive-url")
+        sys.exit(1)
+
     if not valid_images:
-        logger.info("No valid images found or failed to download. Exiting.")
+        logger.info("No valid images found. Exiting.")
         sys.exit(0)
         
     # Phase 2: Iterate & Upload
@@ -86,7 +124,7 @@ def main():
         logger.info(f"Processing new image: {os.path.basename(img_path)}")
         
         # Upload
-        upload_success = uploader.upload_short(img_path, is_dry_run=args.dry_run)
+        upload_success = uploader.upload_short(img_path, is_dry_run=args.dry_run, target_seconds=args.target_seconds)
         
         if upload_success:
             if not args.dry_run:

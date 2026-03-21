@@ -1,11 +1,11 @@
 ---
-title: 'Auto Upload Shorts qua LDPlayer MVP'
+title: 'Auto Upload Shorts qua BlueStacks MVP'
 slug: 'auto-upload-shorts-mvp'
 created: '2026-03-20'
-status: 'Completed'
+status: 'Implementation Complete'
 stepsCompleted: [1, 2, 3, 4, 5]
 tech_stack: ['python', 'uiautomator2', 'gdown']
-files_to_modify: ['main.py', 'src/drive_sync.py', 'src/android_auto.py', 'src/db_manager.py', 'data/titles.txt']
+files_to_modify: ['main.py', 'src/device.py', 'src/drive_sync.py', 'src/android_auto.py', 'src/db_manager.py', 'data/titles.txt']
 code_patterns: ['Modular CLI', 'Single-threaded loop', 'Robust Error/Pop-up Handling']
 test_patterns: ['pytest']
 review_notes: |
@@ -14,7 +14,7 @@ review_notes: |
   Resolution approach: Auto-fix.
 ---
 
-# Đặc tả Kỹ thuật (Tech-Spec): Auto Upload Shorts qua LDPlayer (Bản MVP)
+# Đặc tả Kỹ thuật (Tech-Spec): Auto Upload Shorts qua BlueStacks (Bản MVP)
 
 **Ngày tạo:** 2026-03-20
 
@@ -24,19 +24,19 @@ review_notes: |
 Việc tải lên thủ công hàng trăm video Shorts dạng ảnh tĩnh tốn quá nhiều thời gian và các cách upload từ máy tính (PC) hiện tại không hỗ trợ việc chèn nhạc nền xu hướng (trending music) được tích hợp sẵn trên ứng dụng YouTube di động. Người sáng tạo nội dung gặp khó khăn để "scale" (mở rộng quy mô) nếu họ muốn giữ được các đặc quyền/thuật toán của nền tảng Shorts nguyên bản.
 
 ### Giải pháp (Solution)
-Một công cụ CLI (Giao diện Dòng lệnh) bằng Python có khả năng quét và tải ảnh trực tiếp từ thư mục Google Drive, lọc ảnh để chống trùng lặp qua một cơ sở dữ liệu (Database) theo dõi cục bộ, và tự động hóa thao tác trình giả lập LDPlayer qua `uiautomator2` để mở YouTube App, tạo video 5 giây có nhạc trending và đăng tải tự động.
+Một công cụ CLI (Giao diện Dòng lệnh) bằng Python có khả năng quét và tải ảnh trực tiếp từ thư mục Google Drive, lọc ảnh để chống trùng lặp qua một cơ sở dữ liệu (Database) theo dõi cục bộ, và tự động hóa thao tác trình giả lập BlueStacks/emulator qua `uiautomator2` để mở YouTube App, tạo video 5 giây có nhạc trending và đăng tải tự động.
 
 ### Phạm vi (Scope)
 
 **Trong phạm vi (In Scope):**
 - Tải file từ đường dẫn chia sẻ (shareable link) của Google Drive. Lọc tự động chỉ lấy đúng định dạng ảnh (ví dụ: `.png`, `.jpg`).
 - Theo dõi ID ảnh cục bộ bằng mã băm (SHA-256) của file để chống trùng lặp chính xác 100%.
-- Kịch bản `uiautomator2` tự động điều khiển LDPlayer: Xử lý pop-up bất ngờ, vuốt tìm ứng dụng YouTube, tải lên ảnh tĩnh, chọn kho nhạc, xử lý delay của UI, thêm tiêu đề ngẫu nhiên từ thư viện `titles.txt` và ấn hoàn tất Upload.
+- Kịch bản `uiautomator2` tự động điều khiển BlueStacks/emulator: Xử lý pop-up bất ngờ, vuốt tìm ứng dụng YouTube, tải lên ảnh tĩnh, chọn kho nhạc, xử lý delay của UI, thêm tiêu đề ngẫu nhiên từ thư viện `titles.txt` và ấn hoàn tất Upload.
 - Giao diện CLI xuất ra tiến trình log, tự động dọn dẹp file ảnh tạm (Garbage Collection) sau khi upload thành công hoặc khi xảy ra sự cố ngoại lệ.
 
 **Nằm ngoài Phạm vi (Out of Scope):**
 - Giao diện người dùng đồ họa (GUI).
-- Chạy đa luồng nhiều máy ảo LDPlayer cùng lúc.
+- Chạy đa luồng nhiều máy ảo (BlueStacks/emulator) cùng lúc.
 - Tiêu đề sinh ra bằng Trí tuệ Nhân tạo (chỉ dùng danh sách tĩnh quay vòng).
 - Tự động vượt CAPTCHA nâng cao của Google nếu bị chặn.
 
@@ -50,31 +50,66 @@ Một công cụ CLI (Giao diện Dòng lệnh) bằng Python có khả năng qu
 
 | File | Chức năng (Purpose) |
 | ---- | ------- |
-| `main.py` | Cửa ngõ CLI và Vòng lặp tự động hóa (Automation Loop) chính. Điều hướng logic và báo cáo log. |
+| `main.py` | Cửa ngõ CLI và Vòng lặp tự động hóa (Automation Loop) chính. Điều hướng logic, tham số `--adb-serial`, và báo cáo log. |
+| `src/device.py` | Kết nối `uiautomator2` qua ADB, healthcheck, auto-discovery, retry. |
 | `src/drive_sync.py` | Nhúng `gdown`, có hàm tiện ích giải nén và lọc định dạng file rác (đảm bảo chỉ nhận ảnh hợp lệ). |
-| `src/android_auto.py` | Code sử dụng `uiautomator2` để nhận diện nút bấm (Text/Description) trên LDPlayer, setup các lệnh `wait(timeout)` cứng để tránh vỡ thao tác khi lag mạng. Tích hợp ngắt và đóng lệnh pop-up như Ads/Updates. |
-| `src/db_manager.py` | Quản lý File `history.sqlite` (SQLite bảo vệ an toàn khỏi việc tham nhũng dữ liệu I/O khi sập máy) để lưu dấu băm SHA-256 của file ảnh. |
-| `data/titles.txt` | Nơi chứa các mẫu Caption ngẫu nhiên sẽ được chọn khi đăng lên Youtube. |
+| `src/android_auto.py` | Điều khiển YouTube bằng `uiautomator2`, ưu tiên `resource-id`/`content-desc`, `wait(timeout)`, xử lý pop‑up. |
+| `src/db_manager.py` | Quản lý `history.sqlite` (SQLite) để lưu băm SHA-256; API `is_uploaded`/`mark_success`. |
+| `data/titles.txt` | Nơi chứa các mẫu Caption ngẫu nhiên sẽ được chọn khi đăng lên YouTube. |
 
 ### Quyết định Kỹ thuật (Technical Decisions)
-- **Tự động hóa LDPlayer:** Sử dụng thư viện `uiautomator2` thay vì `adb` thô sơ. Điều này cho phép script dò tìm UI thông minh (`wait_until_visible()`), bỏ qua các thay đổi thiết kế nho nhỏ trên màn hình, cũng như đóng các hộp thoại làm phiền tự nguyện.
+- **Tự động hóa Thiết bị/Emulator:** Sử dụng thư viện `uiautomator2` thay vì `adb` thuần. Hỗ trợ nhiều môi trường: BlueStacks (macOS), Android Studio AVD, hoặc thiết bị Android thật. Ưu tiên selector theo `resource-id`/`content-desc` và cơ chế `wait` ổn định. Giao diện app YouTube cấu hình en-US để ổn định tên text fallback khi cần.
 - **Tích hợp Google Drive:** `gdown` để lấy tốc độ phát triển cực cao, khỏi mất công xin cấp phép Google OAuth phức tạp.
-- **Cơ sở dữ liệu cục bộ (Local DB):** Đã nâng cấp lên `SQLite` 1 bảng đơn giản thay vì JSON để đảm bảo ACID (không mất dữ liệu (corrupt) khi bị thoát app tắt máy giữa chừng).
+- **Cơ sở dữ liệu cục bộ (Local DB):** `SQLite` 1 bảng đơn giản thay vì JSON để đảm bảo ACID (tránh corrupt khi app thoát giữa chừng).
+
+### Kết nối Thiết bị (BlueStacks qua ADB)
+- **Yêu cầu:** BlueStacks bản có Google Play, bật ADB trong Settings; YouTube app ở ngôn ngữ en-US.
+- **Cấu hình:** Thiết lập biến `ADB_SERIAL` (ví dụ: `127.0.0.1:<PORT>`). Nếu không đặt, hệ thống sẽ tự dò thiết bị đơn lẻ từ `adb devices`.
+- **Thiết lập ban đầu:**
+  1) `adb connect 127.0.0.1:<PORT>`
+  2) `python -m uiautomator2 init -s 127.0.0.1:<PORT>`
+  3) Kiểm tra `adb devices` thấy trạng thái `device`.
+- **Mẫu khởi động YouTube:**
+  ```python
+  import uiautomator2 as u2
+
+  def connect(serial=None):
+      d = u2.connect(serial or "127.0.0.1:<PORT>")
+      d.healthcheck()
+      return d
+
+  d = connect()
+  d.app_start("com.google.android.youtube")
+  ```
+- **Ghi chú ổn định:** Khóa hướng dọc (portrait), thêm `wait(timeout)` cho mỗi thao tác, xử lý pop‑up quyền (Allow), và dùng `d.dump_hierarchy()` để tìm `resource-id`/`content-desc` bền thay vì text thuần.
 
 ## Kế hoạch Cài đặt (Implementation Plan)
 
+#### Checklist Thiết bị (BlueStacks miễn phí)
+- Cài BlueStacks bản có Google Play, đăng nhập Play Store, cài YouTube (`com.google.android.youtube`).
+- Bật ADB trong BlueStacks Settings → Advanced → Android Debug Bridge.
+- Ghi nhận PORT ADB BlueStacks hiển thị (ví dụ 5555/5557) và cấu hình `ADB_SERIAL=127.0.0.1:<PORT>`.
+- Chạy `adb connect 127.0.0.1:<PORT>` và `python -m uiautomator2 init -s 127.0.0.1:<PORT>`.
+- Xác nhận `adb devices` hiển thị `device`.
+
+
 ### Các Nhiệm vụ (Tasks)
+
+- [x] Nhiệm vụ 0: Tạo mô-đun thiết bị `src/device.py`
+  - API: `connect_device(serial: Optional[str]) -> Device`
+  - Logic: nếu `serial` rỗng → autodiscovery từ `adb devices` khi chỉ có 1 thiết bị; gọi `healthcheck()`; retry tối đa 3 lần với backoff khi lỗi connect.
 
 - [x] Nhiệm vụ 1: Thiết lập cấu trúc dự án và biến cấu hình CLI.
   - File: `main.py`, `requirements.txt`, `data/titles.txt`
-  - Hành động: Viết Parser `argparse` nhận link Drive. Setup Thư viện Log (lưu log file `.log` và in ra màn hình). Thêm `uiautomator2`, `gdown` vào `requirements.txt`.
+  - Hành động: Viết Parser `argparse` nhận link Drive và tham số `--adb-serial` (mặc định lấy từ ENV `ADB_SERIAL`). Setup thư viện log (lưu `.log` + console). Thêm `uiautomator2`, `gdown` vào `requirements.txt`.
 - [x] Nhiệm vụ 2: Lập trình xử lý đồng bộ Google Drive.
   - File: `src/drive_sync.py`
   - Hành động: Viết hàm `download_and_filter(drive_url: str, temp_dir: str)`. Dùng gdown lấy nội dung folder. Xóa mọi thư mục/file không phải đuôi ảnh và trả về **mảng chứa Absolute Path của đúng ảnh**.
 - [x] Nhiệm vụ 3: Thiết lập SQLite chống trùng lặp & Băm File.
   - File: `src/db_manager.py`
   - Hành động: Băm file ảnh thành chuỗi SHA-256. Mở kết nối SQLite lưu bảng `uploaded_history(hash_id PRIMARY KEY, uploaded_at)`. Hàm `is_uploaded()` và `mark_success()`. Đảm bảo an toàn I/O.
-- [x] Nhiệm vụ 4: Kịch bản YouTube UI cứng cáp.
+- [x] Nhiệm vụ 4: Kịch bản YouTube UI cứng cáp. (đã cập nhật cho BlueStacks/emulator, ưu tiên en-US)
+  - Quy trình cập nhật: Create (+) → Create a Short → chọn image Recent → Next → chọn thời lượng (target ~5s) → Done → chọn nhạc Trending → Next → đặt tiêu đề → Lưu nháp (Save draft).
   - File: `src/android_auto.py`
   - Hành động: Sáng tạo bộ máy tương tác UI. Khởi động app YouTube. Cài đặt thao tác `try..except` kiểm tra pop-up cập nhật/ads (đóng nó lại). Tạo Short -> Chọn thư viện -> Ấn "Tiếp" -> Mặc định chọn một bài nhạc bất kỳ từ danh sách "Thịnh hành" -> Chọn Text ngẫu nhiên từ `data/titles.txt`. Bấm "Tải Short Lên". Kiểm chứng trạng thái Upload qua thanh thông báo (Toast) thành công.
 - [x] Nhiệm vụ 5: Khớp nối Vòng lặp (Control Loop) & Dọn Dẹp (Garbage Collection).
@@ -85,15 +120,17 @@ Một công cụ CLI (Giao diện Dòng lệnh) bằng Python có khả năng qu
 
 - [x] AC 1: (Given) Cho một thư mục Drive gồm 4 ảnh và 1 file PDF rác, (When) khi chạy tool, (Then) công cụ chỉ tải về nguyên xi 4 ảnh và bỏ qua được file kia ở phân vùng `/temp`.
 - [x] AC 2: (Given) Nạp vào 4 ảnh (đã up 2 ảnh vào DB SQLite bằng Hashes), (When) vòng điều hướng chính kích hoạt, (Then) Tool ngó lơ 2 file trùng dẫu tên có khác và chỉ đẩy lên 2 ảnh gốc mới toanh hoàn toàn.
-- [x] AC 3: (Given) Máy ảo LDPlayer đang load, (When) khi thực thi thao tác `upload()`, (Then) nếu bị dính màn báo lỗi/Popup Update, code tự đóng được Pop-up đó và tiếp tục tiến tới giao diện Upload.
-- [x] AC 4: (Given) Sau khi nhấn Tải lên (Upload Short), (When) khi tiến trình Youtube đang tải video mất 5s, (Then) kịch bản sẽ CHỜ cho đến khi xuất hiện trạng thái thông báo tải thành công trước khi ghi "Uploaded Success" vào DB & xóa file ảnh tạm. Nếu lỗi time-out sau 60 giây, cấm ghi vào Local DB.
+- [x] AC 3: (Given) Thiết bị BlueStacks đã bật ADB, (When) thực thi `connect_device()` và `app_start("com.google.android.youtube")`, (Then) YouTube mở thành công ≤ 15s, log hiển thị trạng thái kết nối ổn định (healthcheck ok).
+- [x] AC 4: (Given) Sau khi nhấn Tải lên (Upload Short), (When) tiến trình Youtube đang tải video (~5s), (Then) kịch bản CHỜ trạng thái thông báo tải thành công rồi mới ghi "Uploaded Success" vào DB & xóa file ảnh tạm. Nếu time‑out > 60s, không được đánh dấu thành công.
+- [ ] AC 5: (Robustness) Nếu mất kết nối ADB trong phiên, hệ thống tự retry reconnect tối đa N lần (ví dụ 3) trước khi bỏ qua ảnh hiện tại mà không ghi vào DB.
+- [ ] AC 6: (CLI Override) Khi ENV `ADB_SERIAL=A` nhưng chạy `--adb-serial=B`, hệ thống dùng `B` và log ra serial đã sử dụng.
 
 ## Thông tin bổ sung (Additional Context)
 
 ### Phụ thuộc (Dependencies)
 - Python 3.9+
 - Thư viện: `uiautomator2`, `gdown`, `sqlite3`, `pytest`.
-- Phải kết nối LDPlayer sẵn bằng ADB trên local port `localhost:5555`. 
+- BlueStacks macOS có Google Play; bật ADB tại `127.0.0.1:5555` (theo bạn cung cấp).
 
 ### Chiến lược Test thử nghiệm (Testing Strategy)
 - Thử nghiệm trên Channel (Kênh) Youtube nháp/trắng ở lần đầu tích hợp mạch luân phiên End-to-End.
