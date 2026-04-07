@@ -43,7 +43,7 @@ Phát triển một công cụ tự động hóa thao tác (Macro/RPA) chạy tr
 - **Đường dẫn siêu tốc từ Đám mây (Cloud to Platform):** Quy trình một điểm chạm cho phép tài nguyên từ Google Drive đi thẳng lên YouTube Shorts mà không cần người dùng tải về chỉnh tay.
 - **Tiết kiệm tài nguyên render:** Không cần sử dụng sức mạnh đồ họa PC để render hàng ngàn video cứng; YouTube sẽ tự xử lý việc biến ảnh tĩnh và nhạc thành video Shorts.
 - **Tận dụng lợi thế Music:** Khai thác được thuật toán và kho nhạc bắt tai trực tiếp từ kho ứng dụng của YouTube Mobile, tránh được rủi ro bản quyền của các tool render trên PC.
-- **Scale-up vô hạn & Chống Spam:** Chạy hoàn toàn ngầm qua giả lập LDPlayer mô phỏng hành vi người thật và kết hợp logic code chặn các nội dung lặp lại để giữ kênh luôn Fresh.
+- **Chạy ổn định & tránh trùng lặp:** Tập trung vào độ ổn định khi chạy qua giả lập LDPlayer và cơ chế chống đăng lặp (dedup) để tránh vô tình đăng lại cùng một nội dung.
 
 ---
 
@@ -65,8 +65,8 @@ Phát triển một công cụ tự động hóa thao tác (Macro/RPA) chạy tr
 
 Hành trình tối ưu lý tưởng diễn ra qua 4 bước:
 1. **Chuẩn bị Tài nguyên:** Người dùng tạo sẵn hàng chục/trăm ảnh tĩnh thiết kế bằng Photoshop/Canva và đưa tất cả vào một thư mục Google Drive cố định.
-2. **Khởi chạy (Onboarding):** Người dùng bật máy tính, mở màn hình Terminal (dòng lệnh) lên và gõ chạy công cụ cùng với link thư mục Drive. (Ví dụ: `python auto-upload.py <link-drive>`).
-3. **Thực thi Ngầm (Core Usage):** Người dùng rời khỏi máy đi uống cà phê. Công cụ tự động kết nối Drive kéo ảnh về ➡️ Khởi động LDPlayer ➡️ Tự động hóa vòng lặp (Loop): Chọn ảnh đưa lên YouTube App ➡️ Chọn bản nhạc thịnh hành 5 giây ➡️ Viết tiêu đề/tag ➡️ Upload ➡️ Lưu lịch sử chống trùng ➡️ Tiếp tục.
+2. **Khởi chạy (Onboarding):** Người dùng cấu hình các biến môi trường trong file `.env` (ví dụ `DRIVE_URL` hoặc `LOCAL_DIR`, `ADB_SERIAL`), sau đó chạy `python main.py`.
+3. **Thực thi Ngầm (Core Usage):** Người dùng có thể để công cụ chạy trong nền. Công cụ tự động kết nối Drive kéo ảnh về ➡️ Khởi động LDPlayer ➡️ Vòng lặp xử lý: chọn ảnh ➡️ đưa vào YouTube App ➡️ chọn nhạc thịnh hành ~5 giây ➡️ đặt caption ➡️ hoàn tất thao tác đăng/lưu nháp theo cấu hình ➡️ lưu lịch sử chống trùng ➡️ tiếp tục.
 4. **Khoảnh khắc Thành công (Success Moment):** Người dùng quay lại máy tính, nhìn màn hình Terminal báo cáo xanh mướt: "Hoàn tất upload 100/100 video". Công việc nặng nhọc ngày hôm đó hoàn thành trong 1 giây bấm lệnh.
 
 ---
@@ -85,7 +85,7 @@ Hành trình tối ưu lý tưởng diễn ra qua 4 bước:
 ### Chỉ số Đo lường Hiệu quả (Key Performance Indicators - KPIs)
 - **KPI Sản lượng (Throughput):** Duy trì tải lên thành công và ổn định từ 100 đến 200 video Shorts trong mỗi phiên chạy liên tục mà không bắt buộc khởi động lại tool.
 - **KPI Chống Trùng lặp (Deduplication Rate):** Đạt 100% độ chính xác trong việc đối chiếu, bỏ qua các ảnh trong thư mục Google Drive đã từng xuất bản trước đó.
-- **KPI Thực thi (Execution Rate):** Đạt tỷ lệ upload hoàn chỉnh (đến bước cuối xuất bản) > 95% trên tổng số ảnh nạp vào. Cho phép biên độ lỗi vặt nhỏ (mạng nghẽn, LDPlayer kẹt báo pop-up) với khả năng hệ thống tự bỏ qua (skip error) và đi tiếp tới ảnh sau mà không chết chùm.
+- **KPI Thực thi (Execution Rate):** Đạt tỷ lệ hoàn tất luồng (đến bước cuối xuất bản hoặc lưu nháp theo cấu hình) > 95% trên tổng số ảnh nạp vào. Cho phép biên độ lỗi vặt nhỏ (mạng nghẽn, LDPlayer kẹt pop-up) với khả năng hệ thống tự bỏ qua (skip error) và đi tiếp tới ảnh sau.
 
 ---
 
@@ -101,7 +101,7 @@ Hành trình tối ưu lý tưởng diễn ra qua 4 bước:
 - Xây dựng Giao diện đồ họa người dùng đồ sộ (GUI).
 - Chạy đa thiết bị, đa luồng LDPlayer hay quản lý luân phiên nhiều tài khoản YouTube cùng lúc (Chỉ tập trung 1 tài khoản/1 máy hiện tại).
 - Ứng dụng LLMs (ChatGPT/Claude,...) để sinh Tiêu đề/Phân tích nội dung theo ảnh thời gian thực.
-- Xử lý phức tạp các cửa sổ bảo mật (CAPTCHA) bất ngờ do AI chống spam của Google tung ra.
+- Xử lý phức tạp các cửa sổ bảo mật (CAPTCHA) bất ngờ do hệ thống bảo mật của Google.
 
 ### Tiêu chí Thành công của bản MVP (MVP Success Criteria)
 - Đạt được vòng chạy khép kín (E2E Run): Lấy link URL Drive ảo ➡️ Bắn được luồng lên YouTube qua LDPlayer thành công trọn vẹn.

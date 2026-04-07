@@ -852,3 +852,508 @@ java.lang.IllegalStateException: UiAutomation not connected, UiAutomation@b2be82
 2026-03-21 12:13:38,258 - src.android_auto - INFO - Transferring /Users/nguyenquocbao/Developer/auto-upload/temp/4_người_tấn_công_đôi_nam_nữ_giữa_đường_ở_TPHCM.jpg to device at /sdcard/Download/4_người_tấn_công_đôi_nam_nữ_giữa_đường_ở_TPHCM.jpg
 2026-03-21 12:13:38,399 - src.android_auto - INFO - Opening YouTube app...
 2026-03-21 12:13:48,720 - src.android_auto - INFO - Clicking Create (+) button...
+2026-03-22 23:33:10,046 - __main__ - INFO - Starting Auto Upload Shorts (env-only mode)
+2026-03-22 23:33:10,047 - src.db_manager - INFO - Database initialized and connected at history.sqlite
+2026-03-22 23:33:10,047 - src.device - INFO - Connecting to Android device/emulator at 127.0.0.1:5555 (attempt 1/3)�
+2026-03-22 23:33:12,349 - src.device - WARNING - uiautomator2.healthcheck() not available; proceeded after info() ping.
+2026-03-22 23:33:12,477 - src.android_auto - INFO - Opening YouTube app...
+2026-03-22 23:33:22,015 - src.ldplayer_macro - INFO - Focusing LDPlayer window (title='LDPlayer') attempt 1/3
+2026-03-22 23:46:08,478 - __main__ - INFO - Starting Auto Upload Shorts (env-only mode)
+2026-03-22 23:50:23,199 - __main__ - INFO - Starting Auto Upload Shorts (env-only mode)
+2026-03-22 23:51:01,047 - __main__ - INFO - Starting Auto Upload Shorts (env-only mode)
+2026-03-22 23:56:33,009 - __main__ - INFO - Starting Auto Upload Shorts (env-only mode)
+2026-03-22 23:56:33,009 - __main__ - INFO - Loading configuration from ENV/.env
+2026-03-22 23:56:57,341 - src.db_manager - INFO - Database initialized and connected at history.sqlite
+2026-03-22 23:56:57,341 - src.device - INFO - Connecting to Android device/emulator at 127.0.0.1:5555 (attempt 1/3)�
+2026-03-22 23:56:58,698 - src.device - WARNING - uiautomator2.healthcheck() not available; proceeded after info() ping.
+2026-03-22 23:56:59,112 - src.android_auto - INFO - Opening YouTube app...
+2026-03-22 23:57:08,521 - src.ldplayer_macro - INFO - Focusing LDPlayer window (title='LDPlayer') attempt 1/3
+2026-03-22 23:57:35,937 - src.ldplayer_macro - INFO - Focusing LDPlayer window (title='LDPlayer') attempt 2/3
+2026-03-22 23:58:03,988 - src.ldplayer_macro - INFO - Focusing LDPlayer window (title='LDPlayer') attempt 3/3
+2026-03-22 23:58:29,429 - src.android_auto - ERROR - Error during macro upload: Failed to trigger LDPlayer macro after 3 attempts: LDPlayer window 'LDPlayer' is not the active foreground window after focus
+2026-03-22 23:58:29,430 - __main__ - INFO - ====================================
+2026-03-22 23:58:29,430 - __main__ - INFO - Auto Upload Process Completed
+2026-03-22 23:58:29,430 - __main__ - INFO - Total processed: 1
+2026-03-22 23:58:29,430 - __main__ - INFO - Success: 0, Skipped (duplicate): 0, Failed: 1
+2026-03-22 23:58:29,431 - __main__ - INFO - ====================================
+2026-03-23 00:02:54,870 - __main__ - INFO - Starting Auto Upload Shorts (env-only mode)
+2026-03-23 00:02:54,871 - __main__ - INFO - Loading configuration from ENV/.env
+2026-03-23 00:03:36,390 - src.db_manager - INFO - Database initialized and connected at history.sqlite
+2026-03-23 00:03:36,391 - src.device - INFO - Connecting to Android device/emulator at 127.0.0.1:5555 (attempt 1/3)�
+2026-03-23 00:03:37,644 - src.device - WARNING - uiautomator2.healthcheck() not available; proceeded after info() ping.
+2026-03-23 00:03:37,767 - src.android_auto - INFO - Opening YouTube app...
+2026-03-23 00:03:47,211 - src.ldplayer_macro - INFO - Focusing LDPlayer window (title='LDPlayer') attempt 1/3
+2026-03-23 00:04:28,030 - src.ldplayer_macro - INFO - Focusing LDPlayer window (title='LDPlayer') attempt 2/3
+2026-03-23 00:05:11,226 - src.ldplayer_macro - INFO - Focusing LDPlayer window (title='LDPlayer') attempt 3/3
+2026-03-23 00:05:52,529 - src.android_auto - ERROR - Error during macro upload: Failed to trigger LDPlayer macro after 3 attempts: LDPlayer window 'LDPlayer' is not the active foreground window after focus
+2026-03-23 00:05:52,531 - __main__ - INFO - ====================================
+2026-03-23 00:05:52,531 - __main__ - INFO - Auto Upload Process Completed
+2026-03-23 00:05:52,531 - __main__ - INFO - Total processed: 1
+2026-03-23 00:05:52,532 - __main__ - INFO - Success: 0, Skipped (duplicate): 0, Failed: 1
+2026-03-23 00:05:52,532 - __main__ - INFO - ====================================
+2026-03-23 00:10:27,541 - __main__ - INFO - Starting Auto Upload Shorts (env-only mode)
+2026-03-23 00:10:27,542 - __main__ - INFO - Loading configuration from ENV/.env
+2026-03-23 00:11:06,553 - src.db_manager - INFO - Database initialized and connected at history.sqlite
+2026-03-23 00:11:06,554 - src.device - INFO - Connecting to Android device/emulator at 127.0.0.1:5555 (attempt 1/3)�
+2026-03-23 00:11:07,236 - src.device - WARNING - uiautomator2.healthcheck() not available; proceeded after info() ping.
+2026-03-23 00:11:07,338 - src.android_auto - INFO - Opening YouTube app...
+2026-03-23 00:11:16,605 - src.ldplayer_macro - INFO - Focusing LDPlayer window (title='LDPlayer') attempt 1/3
+2026-03-23 00:11:57,176 - src.ldplayer_macro - INFO - Sending hotkey Ctrl+F5 to LDPlayer
+2026-03-23 00:11:57,378 - src.ldplayer_macro - INFO - Focusing LDPlayer window (title='LDPlayer') attempt 2/3
+2026-03-23 00:12:38,465 - src.ldplayer_macro - INFO - Sending hotkey Ctrl+F5 to LDPlayer
+2026-03-23 00:12:38,867 - src.ldplayer_macro - INFO - Focusing LDPlayer window (title='LDPlayer') attempt 3/3
+2026-03-23 00:13:19,965 - src.ldplayer_macro - INFO - Sending hotkey Ctrl+F5 to LDPlayer
+2026-03-23 00:13:19,965 - src.android_auto - ERROR - Error during macro upload: Failed to trigger LDPlayer macro after 3 attempts: Unknown code: {F5
+2026-03-23 00:13:19,967 - __main__ - INFO - ====================================
+2026-03-23 00:13:19,967 - __main__ - INFO - Auto Upload Process Completed
+2026-03-23 00:13:19,967 - __main__ - INFO - Total processed: 1
+2026-03-23 00:13:19,967 - __main__ - INFO - Success: 0, Skipped (duplicate): 0, Failed: 1
+2026-03-23 00:13:19,967 - __main__ - INFO - ====================================
+2026-03-23 00:17:59,153 - __main__ - INFO - Starting Auto Upload Shorts (env-only mode)
+2026-03-23 00:17:59,154 - __main__ - INFO - Loading configuration from ENV/.env
+2026-03-23 00:18:37,820 - src.db_manager - INFO - Database initialized and connected at history.sqlite
+2026-03-23 00:18:37,820 - src.device - INFO - Connecting to Android device/emulator at 127.0.0.1:5555 (attempt 1/3)�
+2026-03-23 00:18:39,039 - src.device - WARNING - uiautomator2.healthcheck() not available; proceeded after info() ping.
+2026-03-23 00:18:39,162 - src.android_auto - INFO - Opening YouTube app...
+2026-03-23 00:18:48,718 - src.ldplayer_macro - INFO - Focusing LDPlayer window (title='LDPlayer') attempt 1/3
+2026-03-23 00:19:28,841 - src.ldplayer_macro - INFO - Sending hotkey Ctrl+F5 to LDPlayer
+2026-03-23 00:19:28,993 - src.android_auto - INFO - Waiting for upload to finish (up to 180s)...
+2026-03-23 00:22:30,728 - src.android_auto - WARNING - Did not detect Upload success indicator within timeout.
+2026-03-23 00:22:30,730 - __main__ - INFO - ====================================
+2026-03-23 00:22:30,730 - __main__ - INFO - Auto Upload Process Completed
+2026-03-23 00:22:30,730 - __main__ - INFO - Total processed: 1
+2026-03-23 00:22:30,730 - __main__ - INFO - Success: 0, Skipped (duplicate): 0, Failed: 1
+2026-03-23 00:22:30,730 - __main__ - INFO - ====================================
+2026-03-23 14:07:27,860 - __main__ - INFO - Starting Auto Upload Shorts (env-only mode)
+2026-03-23 14:07:27,860 - __main__ - INFO - Loading configuration from ENV/.env
+2026-03-23 14:07:32,470 - src.db_manager - INFO - Database initialized and connected at history.sqlite
+2026-03-23 14:07:32,470 - src.device - INFO - Connecting to Android device/emulator at 127.0.0.1:5555 (attempt 1/3)…
+2026-03-23 14:07:34,508 - src.device - WARNING - uiautomator2.healthcheck() not available; proceeded after info() ping.
+2026-03-23 14:07:34,517 - __main__ - INFO - Loaded 1 images from local dir: C:\Users\Admin\OneDrive\Tài liệu\XuanZhi9\Pictures
+2026-03-23 14:07:34,526 - __main__ - INFO - Processing new image: 3_cách_sử_dụng_dứa_hỗ_trợ_chức_năng_thận__default.jpg
+2026-03-23 14:07:34,566 - src.android_auto - INFO - Transferring C:\Users\Admin\OneDrive\Tài liệu\XuanZhi9\Pictures\3_cách_sử_dụng_dứa_hỗ_trợ_chức_năng_thận__default.jpg to device at /sdcard/Download/auto_upload_latest.jpg
+2026-03-23 14:07:34,689 - src.android_auto - INFO - Device file check: ShellResponse(output='-rw-rw---- 1 root sdcard_rw 391581 2026-03-23 14:07 /sdcard/Download/auto_upload_latest.jpg\n', exit_code=0)
+2026-03-23 14:07:34,877 - src.android_auto - INFO - Opening YouTube app...
+2026-03-23 14:07:44,376 - src.android_auto - INFO - Triggering LDPlayer macro (Ctrl+F5)...
+2026-03-23 14:07:44,377 - src.ldplayer_macro - INFO - Focusing LDPlayer window (title='LDPlayer') attempt 1/3
+2026-03-23 14:07:46,846 - src.ldplayer_macro - INFO - Sending hotkey Ctrl+F5 to LDPlayer
+2026-03-23 14:07:46,999 - src.android_auto - INFO - Waiting for upload to finish (up to 180s)...
+2026-03-23 14:10:47,263 - src.android_auto - WARNING - Dumped UI to ui_dump_upload_timeout.xml for debugging
+2026-03-23 14:10:47,264 - src.android_auto - WARNING - Did not detect Upload success indicator within timeout.
+2026-03-23 14:10:47,264 - __main__ - ERROR - Failed to upload 3_cách_sử_dụng_dứa_hỗ_trợ_chức_năng_thận__default.jpg
+2026-03-23 14:10:47,264 - __main__ - INFO - ====================================
+2026-03-23 14:10:47,264 - __main__ - INFO - Auto Upload Process Completed
+2026-03-23 14:10:47,264 - __main__ - INFO - Total processed: 1
+2026-03-23 14:10:47,264 - __main__ - INFO - Success: 0, Skipped (duplicate): 0, Failed: 1
+2026-03-23 14:10:47,265 - __main__ - INFO - ====================================
+2026-03-23 14:20:47,211 - __main__ - INFO - Starting Auto Upload Shorts (env-only mode)
+2026-03-23 14:20:47,212 - __main__ - INFO - Loading configuration from ENV/.env
+2026-03-23 14:20:51,800 - src.db_manager - INFO - Database initialized and connected at history.sqlite
+2026-03-23 14:20:51,800 - src.device - INFO - Connecting to Android device/emulator at 127.0.0.1:5555 (attempt 1/3)…
+2026-03-23 14:20:53,101 - src.device - WARNING - uiautomator2.healthcheck() not available; proceeded after info() ping.
+2026-03-23 14:20:53,103 - __main__ - INFO - Loaded 1 images from local dir: C:\Users\Admin\OneDrive\Tài liệu\XuanZhi9\Pictures
+2026-03-23 14:20:53,106 - __main__ - INFO - Processing new image: 3_cách_sử_dụng_dứa_hỗ_trợ_chức_năng_thận__default.jpg
+2026-03-23 14:21:06,082 - src.android_auto - INFO - Transferring C:\Users\Admin\OneDrive\Tài liệu\XuanZhi9\Pictures\3_cách_sử_dụng_dứa_hỗ_trợ_chức_năng_thận__default.jpg to device at /sdcard/Download/auto_upload_latest.jpg
+2026-03-23 14:21:06,470 - src.android_auto - INFO - Device file check: ShellResponse(output='-rw-rw---- 1 root sdcard_rw 391581 2026-03-23 14:21 /sdcard/Download/auto_upload_latest.jpg\n', exit_code=0)
+2026-03-23 14:21:06,532 - src.android_auto - INFO - Opening YouTube app...
+2026-03-23 14:21:15,966 - src.android_auto - INFO - Triggering LDPlayer macro (Ctrl+F5)...
+2026-03-23 14:21:15,966 - src.ldplayer_macro - INFO - Focusing LDPlayer window (title='LDPlayer') attempt 1/3
+2026-03-23 14:21:17,814 - src.ldplayer_macro - INFO - Sending hotkey Ctrl+F5 to LDPlayer
+2026-03-23 14:21:17,967 - src.android_auto - INFO - Waiting for upload to finish (up to 90s)...
+2026-03-23 14:22:51,412 - src.android_auto - WARNING - Dumped UI to ui_dump_upload_timeout.xml for debugging
+2026-03-23 14:22:51,412 - src.android_auto - INFO - No explicit success indicator detected; verifying via Drafts list...
+2026-03-23 14:23:04,348 - src.android_auto - WARNING - Did not detect Upload success indicator within timeout.
+2026-03-23 14:23:04,348 - __main__ - ERROR - Failed to upload 3_cách_sử_dụng_dứa_hỗ_trợ_chức_năng_thận__default.jpg
+2026-03-23 14:23:04,348 - __main__ - INFO - ====================================
+2026-03-23 14:23:04,348 - __main__ - INFO - Auto Upload Process Completed
+2026-03-23 14:23:04,348 - __main__ - INFO - Total processed: 1
+2026-03-23 14:23:04,349 - __main__ - INFO - Success: 0, Skipped (duplicate): 0, Failed: 1
+2026-03-23 14:23:04,349 - __main__ - INFO - ====================================
+2026-03-23 14:31:04,753 - __main__ - INFO - Starting Auto Upload Shorts (env-only mode)
+2026-03-23 14:31:04,754 - __main__ - INFO - Loading configuration from ENV/.env
+2026-03-23 14:31:09,785 - src.db_manager - INFO - Database initialized and connected at history.sqlite
+2026-03-23 14:31:09,786 - src.device - INFO - Connecting to Android device/emulator at 127.0.0.1:5555 (attempt 1/3)…
+2026-03-23 14:31:11,009 - src.device - WARNING - uiautomator2.healthcheck() not available; proceeded after info() ping.
+2026-03-23 14:31:11,011 - __main__ - INFO - Loaded 1 images from local dir: C:\Users\Admin\OneDrive\Tài liệu\XuanZhi9\Pictures
+2026-03-23 14:31:11,015 - __main__ - INFO - Processing new image: 3_cách_sử_dụng_dứa_hỗ_trợ_chức_năng_thận__default.jpg
+2026-03-23 14:31:24,046 - src.android_auto - INFO - Transferring C:\Users\Admin\OneDrive\Tài liệu\XuanZhi9\Pictures\3_cách_sử_dụng_dứa_hỗ_trợ_chức_năng_thận__default.jpg to device at /sdcard/Download/auto_upload_latest.jpg
+2026-03-23 14:31:24,154 - src.android_auto - INFO - Device file check: ShellResponse(output='-rw-rw---- 1 root sdcard_rw 391581 2026-03-23 14:31 /sdcard/Download/auto_upload_latest.jpg\n', exit_code=0)
+2026-03-23 14:31:24,198 - src.android_auto - INFO - Opening YouTube app...
+2026-03-23 14:31:44,080 - __main__ - INFO - Starting Auto Upload Shorts (env-only mode)
+2026-03-23 14:31:44,081 - __main__ - INFO - Loading configuration from ENV/.env
+2026-03-23 14:31:49,069 - src.db_manager - INFO - Database initialized and connected at history.sqlite
+2026-03-23 14:31:49,069 - src.device - INFO - Connecting to Android device/emulator at 127.0.0.1:5555 (attempt 1/3)…
+2026-03-23 14:31:49,715 - src.device - WARNING - uiautomator2.healthcheck() not available; proceeded after info() ping.
+2026-03-23 14:31:49,717 - __main__ - INFO - Loaded 0 images from local dir: C:\Users\Admin\Downloadsuto-upload	emp
+2026-03-23 14:31:49,717 - __main__ - INFO - No valid images found. Exiting.
+2026-03-23 14:35:42,970 - __main__ - INFO - Starting Auto Upload Shorts (env-only mode)
+2026-03-23 14:35:42,970 - __main__ - INFO - Loading configuration from ENV/.env
+2026-03-23 14:35:47,929 - src.db_manager - INFO - Database initialized and connected at history.sqlite
+2026-03-23 14:35:47,929 - src.device - INFO - Connecting to Android device/emulator at 127.0.0.1:5555 (attempt 1/3)…
+2026-03-23 14:35:48,629 - src.device - WARNING - uiautomator2.healthcheck() not available; proceeded after info() ping.
+2026-03-23 14:35:48,630 - __main__ - INFO - Loaded 5 images from local dir: C:/Users/Admin/Downloads/auto-upload/temp
+2026-03-23 14:35:48,633 - __main__ - INFO - Processing new image: 3_nhan_sắc_Hoa_hậu_Đại_dương_Việt_Nam_2025_làm_nàng_thơ_áo_dài.jpg
+2026-03-23 14:36:01,535 - src.android_auto - INFO - Transferring C:\Users\Admin\Downloads\auto-upload\temp\3_nhan_sắc_Hoa_hậu_Đại_dương_Việt_Nam_2025_làm_nàng_thơ_áo_dài.jpg to device at /sdcard/Download/auto_upload_latest.jpg
+2026-03-23 14:36:01,633 - src.android_auto - INFO - Device file check: ShellResponse(output='-rw-rw---- 1 root sdcard_rw 728590 2026-03-23 14:36 /sdcard/Download/auto_upload_latest.jpg\n', exit_code=0)
+2026-03-23 14:36:01,682 - src.android_auto - INFO - Opening YouTube app...
+2026-03-23 14:36:11,053 - src.android_auto - INFO - Triggering LDPlayer macro (Ctrl+F5)...
+2026-03-23 14:36:11,053 - src.ldplayer_macro - INFO - Focusing LDPlayer window (title='LDPlayer') attempt 1/3
+2026-03-23 14:36:15,732 - src.ldplayer_macro - INFO - Sending hotkey Ctrl+F5 to LDPlayer
+2026-03-23 14:36:15,887 - src.android_auto - INFO - Waiting for upload to finish (up to 90s)...
+2026-03-23 14:37:47,854 - src.android_auto - WARNING - Dumped UI to ui_dump_upload_timeout.xml for debugging
+2026-03-23 14:37:47,854 - src.android_auto - INFO - No explicit success indicator detected; verifying via Drafts list...
+2026-03-23 14:38:00,787 - src.android_auto - WARNING - Did not detect Upload success indicator within timeout.
+2026-03-23 14:38:00,788 - __main__ - ERROR - Failed to upload 3_nhan_sắc_Hoa_hậu_Đại_dương_Việt_Nam_2025_làm_nàng_thơ_áo_dài.jpg
+2026-03-23 14:38:00,789 - __main__ - INFO - Processing new image: 4_khung_giờ_vàng_trong_ngày_để_học_tiếng_Anh_hiệu_quả_nhất.jpg
+2026-03-23 14:38:13,785 - src.android_auto - INFO - Transferring C:\Users\Admin\Downloads\auto-upload\temp\4_khung_giờ_vàng_trong_ngày_để_học_tiếng_Anh_hiệu_quả_nhất.jpg to device at /sdcard/Download/auto_upload_latest.jpg
+2026-03-23 14:38:13,873 - src.android_auto - INFO - Device file check: ShellResponse(output='-rw-rw---- 1 root sdcard_rw 391553 2026-03-23 14:38 /sdcard/Download/auto_upload_latest.jpg\n', exit_code=0)
+2026-03-23 14:38:13,927 - src.android_auto - INFO - Opening YouTube app...
+2026-03-23 14:38:23,533 - src.android_auto - INFO - Triggering LDPlayer macro (Ctrl+F5)...
+2026-03-23 14:38:23,533 - src.ldplayer_macro - INFO - Focusing LDPlayer window (title='LDPlayer') attempt 1/3
+2026-03-23 14:38:25,500 - src.ldplayer_macro - INFO - Sending hotkey Ctrl+F5 to LDPlayer
+2026-03-23 14:38:25,654 - src.android_auto - INFO - Waiting for upload to finish (up to 90s)...
+2026-03-23 14:39:58,537 - src.android_auto - WARNING - Dumped UI to ui_dump_upload_timeout.xml for debugging
+2026-03-23 14:39:58,537 - src.android_auto - INFO - No explicit success indicator detected; verifying via Drafts list...
+2026-03-23 15:01:14,295 - __main__ - INFO - Starting Auto Upload Shorts (env-only mode)
+2026-03-23 15:01:14,295 - __main__ - INFO - Loading configuration from ENV/.env
+2026-03-23 15:01:18,207 - src.db_manager - INFO - Database initialized and connected at history.sqlite
+2026-03-23 15:01:18,207 - src.device - INFO - Connecting to Android device/emulator at 127.0.0.1:5555 (attempt 1/3)…
+2026-03-23 15:01:18,904 - src.device - WARNING - uiautomator2.healthcheck() not available; proceeded after info() ping.
+2026-03-23 15:01:18,906 - __main__ - INFO - Loaded 5 images from local dir: C:/Users/Admin/Downloads/auto-upload/temp
+2026-03-23 15:01:18,906 - __main__ - INFO - Processing new image: 4_khung_giờ_vàng_trong_ngày_để_học_tiếng_Anh_hiệu_quả_nhất.jpg
+2026-03-23 15:01:32,333 - src.android_auto - INFO - Transferring C:\Users\Admin\Downloads\auto-upload\temp\4_khung_giờ_vàng_trong_ngày_để_học_tiếng_Anh_hiệu_quả_nhất.jpg to device at /sdcard/Download/auto_upload_latest.jpg
+2026-03-23 15:01:32,739 - src.android_auto - INFO - Device file check: ShellResponse(output='-rw-rw---- 1 root sdcard_rw 391553 2026-03-23 15:01 /sdcard/Download/auto_upload_latest.jpg\n', exit_code=0)
+2026-03-23 15:01:32,778 - src.android_auto - INFO - Opening YouTube app...
+2026-03-23 15:01:42,262 - src.android_auto - INFO - Triggering LDPlayer macro (Ctrl+F5)...
+2026-03-23 15:01:42,262 - src.ldplayer_macro - INFO - Focusing LDPlayer window (title='LDPlayer') attempt 1/3
+2026-03-23 15:01:44,745 - src.ldplayer_macro - INFO - Sending hotkey Ctrl+F5 to LDPlayer
+2026-03-23 15:01:44,899 - src.android_auto - INFO - Waiting for upload to finish (up to 90s)...
+2026-03-23 15:03:18,286 - src.android_auto - WARNING - Dumped UI to ui_dump_upload_timeout.xml for debugging
+2026-03-23 15:03:18,286 - src.android_auto - INFO - No explicit success indicator detected; verifying via Drafts list...
+2026-03-23 15:03:31,307 - src.android_auto - WARNING - Did not detect Upload success indicator within timeout.
+2026-03-23 15:03:31,307 - __main__ - ERROR - Failed to upload 4_khung_giờ_vàng_trong_ngày_để_học_tiếng_Anh_hiệu_quả_nhất.jpg
+2026-03-23 15:03:31,308 - __main__ - INFO - Processing new image: 4_người_tấn_công_đôi_nam_nữ_giữa_đường_ở_TPHCM.jpg
+2026-03-23 15:03:44,287 - src.android_auto - INFO - Transferring C:\Users\Admin\Downloads\auto-upload\temp\4_người_tấn_công_đôi_nam_nữ_giữa_đường_ở_TPHCM.jpg to device at /sdcard/Download/auto_upload_latest.jpg
+2026-03-23 15:03:44,376 - src.android_auto - INFO - Device file check: ShellResponse(output='-rw-rw---- 1 root sdcard_rw 303395 2026-03-23 15:03 /sdcard/Download/auto_upload_latest.jpg\n', exit_code=0)
+2026-03-23 15:03:44,425 - src.android_auto - INFO - Opening YouTube app...
+2026-03-23 15:03:54,022 - src.android_auto - INFO - Triggering LDPlayer macro (Ctrl+F5)...
+2026-03-23 15:03:54,022 - src.ldplayer_macro - INFO - Focusing LDPlayer window (title='LDPlayer') attempt 1/3
+2026-03-23 15:03:58,726 - src.ldplayer_macro - INFO - Sending hotkey Ctrl+F5 to LDPlayer
+2026-03-23 15:03:58,881 - src.android_auto - INFO - Waiting for upload to finish (up to 90s)...
+2026-03-23 15:05:30,759 - src.android_auto - WARNING - Dumped UI to ui_dump_upload_timeout.xml for debugging
+2026-03-23 15:05:30,760 - src.android_auto - INFO - No explicit success indicator detected; verifying via Drafts list...
+2026-03-23 15:05:43,688 - src.android_auto - WARNING - Did not detect Upload success indicator within timeout.
+2026-03-23 15:05:43,689 - __main__ - ERROR - Failed to upload 4_người_tấn_công_đôi_nam_nữ_giữa_đường_ở_TPHCM.jpg
+2026-03-23 15:05:43,690 - __main__ - INFO - Processing new image: 4_phương_pháp_điều_trị_rò_hậu_môn.jpg
+2026-03-23 15:05:56,656 - src.android_auto - INFO - Transferring C:\Users\Admin\Downloads\auto-upload\temp\4_phương_pháp_điều_trị_rò_hậu_môn.jpg to device at /sdcard/Download/auto_upload_latest.jpg
+2026-03-23 15:05:56,764 - src.android_auto - INFO - Device file check: ShellResponse(output='-rw-rw---- 1 root sdcard_rw 353493 2026-03-23 15:05 /sdcard/Download/auto_upload_latest.jpg\n', exit_code=0)
+2026-03-23 15:05:56,812 - src.android_auto - INFO - Opening YouTube app...
+2026-03-23 15:06:06,302 - src.android_auto - INFO - Triggering LDPlayer macro (Ctrl+F5)...
+2026-03-23 15:06:06,303 - src.ldplayer_macro - INFO - Focusing LDPlayer window (title='LDPlayer') attempt 1/3
+2026-03-23 15:06:10,373 - src.ldplayer_macro - INFO - Sending hotkey Ctrl+F5 to LDPlayer
+2026-03-23 15:06:10,527 - src.android_auto - INFO - Waiting for upload to finish (up to 90s)...
+2026-03-23 15:07:42,872 - src.android_auto - WARNING - Dumped UI to ui_dump_upload_timeout.xml for debugging
+2026-03-23 15:07:42,872 - src.android_auto - INFO - No explicit success indicator detected; verifying via Drafts list...
+2026-03-23 15:07:55,898 - src.android_auto - WARNING - Did not detect Upload success indicator within timeout.
+2026-03-23 15:07:55,898 - __main__ - ERROR - Failed to upload 4_phương_pháp_điều_trị_rò_hậu_môn.jpg
+2026-03-23 15:07:55,899 - __main__ - INFO - Processing new image: 4_thực_phẩm_có_thể_giảm_nguy_cơ_ung_thư_đại_trực_tràng.jpg
+2026-03-23 15:08:08,910 - src.android_auto - INFO - Transferring C:\Users\Admin\Downloads\auto-upload\temp\4_thực_phẩm_có_thể_giảm_nguy_cơ_ung_thư_đại_trực_tràng.jpg to device at /sdcard/Download/auto_upload_latest.jpg
+2026-03-23 15:08:09,003 - src.android_auto - INFO - Device file check: ShellResponse(output='-rw-rw---- 1 root sdcard_rw 460589 2026-03-23 15:08 /sdcard/Download/auto_upload_latest.jpg\n', exit_code=0)
+2026-03-23 15:08:09,044 - src.android_auto - INFO - Opening YouTube app...
+2026-03-23 15:08:18,472 - src.android_auto - INFO - Triggering LDPlayer macro (Ctrl+F5)...
+2026-03-23 15:08:18,472 - src.ldplayer_macro - INFO - Focusing LDPlayer window (title='LDPlayer') attempt 1/3
+2026-03-23 15:08:21,536 - src.ldplayer_macro - INFO - Sending hotkey Ctrl+F5 to LDPlayer
+2026-03-23 15:08:21,689 - src.android_auto - INFO - Waiting for upload to finish (up to 90s)...
+2026-03-24 22:47:48,696 - __main__ - INFO - Starting Auto Upload Shorts (env-only mode)
+2026-03-24 22:47:48,697 - __main__ - INFO - Loading configuration from ENV/.env
+2026-03-24 22:49:29,581 - src.db_manager - INFO - Database initialized and connected at history.sqlite
+2026-03-24 22:49:29,581 - src.device - INFO - Connecting to Android device/emulator at 127.0.0.1:5555 (attempt 1/3)…
+2026-03-24 22:49:30,993 - src.device - WARNING - uiautomator2.healthcheck() not available; proceeded after info() ping.
+2026-03-24 22:49:31,002 - __main__ - INFO - Loaded 5 images from local dir: C:/Users/Admin/Downloads/auto-upload/temp
+2026-03-24 22:49:31,003 - __main__ - INFO - Processing new image: 4_khung_giờ_vàng_trong_ngày_để_học_tiếng_Anh_hiệu_quả_nhất.jpg
+2026-03-24 22:49:31,003 - src.android_auto - INFO - Derived title from filename: khung giờ vàng trong ngày để học tiếng Anh hiệu quả nhất
+2026-03-24 22:49:44,150 - src.android_auto - INFO - Transferring C:\Users\Admin\Downloads\auto-upload\temp\4_khung_giờ_vàng_trong_ngày_để_học_tiếng_Anh_hiệu_quả_nhất.jpg to device at /sdcard/Download/auto_upload_latest.jpg
+2026-03-24 22:49:44,246 - src.android_auto - INFO - Device file check: ShellResponse(output='-rw-rw---- 1 root sdcard_rw 391553 2026-03-24 22:49 /sdcard/Download/auto_upload_latest.jpg\n', exit_code=0)
+2026-03-24 22:49:44,433 - src.android_auto - INFO - Opening YouTube app...
+2026-03-24 22:49:53,929 - src.android_auto - INFO - Triggering LDPlayer macro (Ctrl+F5)...
+2026-03-24 22:49:53,930 - src.ldplayer_macro - INFO - Focusing LDPlayer window (title='LDPlayer') attempt 1/3
+2026-03-24 22:51:32,134 - src.ldplayer_macro - INFO - Focusing LDPlayer window (title='LDPlayer') attempt 2/3
+2026-03-25 13:18:25,979 - __main__ - INFO - Starting Auto Upload Shorts (env-only mode)
+2026-03-25 13:18:25,980 - __main__ - INFO - Loading configuration from ENV/.env
+2026-03-25 13:18:30,681 - src.db_manager - INFO - Database initialized and connected at history.sqlite
+2026-03-25 13:18:30,682 - src.device - INFO - Connecting to Android device/emulator at 127.0.0.1:5555 (attempt 1/3)…
+2026-03-25 13:18:32,058 - src.device - WARNING - uiautomator2.healthcheck() not available; proceeded after info() ping.
+2026-03-25 13:18:32,060 - __main__ - INFO - Loaded 5 images from local dir: C:/Users/Admin/Downloads/auto-upload/temp
+2026-03-25 13:18:32,062 - __main__ - INFO - Processing new image: 4_khung_giờ_vàng_trong_ngày_để_học_tiếng_Anh_hiệu_quả_nhất.jpg
+2026-03-25 13:18:32,064 - src.android_auto - INFO - Derived title from filename: khung giờ vàng trong ngày để học tiếng Anh hiệu quả nhất
+2026-03-25 13:18:45,335 - src.android_auto - INFO - Transferring C:\Users\Admin\Downloads\auto-upload\temp\4_khung_giờ_vàng_trong_ngày_để_học_tiếng_Anh_hiệu_quả_nhất.jpg to device at /sdcard/Download/auto_upload_latest.jpg
+2026-03-25 13:18:45,716 - src.android_auto - INFO - Device file check: ShellResponse(output='-rw-rw---- 1 root sdcard_rw 391553 2026-03-25 13:18 /sdcard/Download/auto_upload_latest.jpg\n', exit_code=0)
+2026-03-25 13:18:45,910 - src.android_auto - INFO - Opening YouTube app...
+2026-03-25 13:18:55,632 - src.android_auto - INFO - Triggering LDPlayer macro (Ctrl+F5)...
+2026-03-25 13:18:55,633 - src.ldplayer_macro - INFO - Focusing LDPlayer window (title='LDPlayer') attempt 1/3
+2026-03-25 13:18:57,492 - src.ldplayer_macro - INFO - Sending hotkey Ctrl+F5 to LDPlayer
+2026-03-25 13:19:27,707 - src.android_auto - ERROR - Caption input not found after macro trigger.
+2026-03-25 13:19:27,707 - __main__ - ERROR - Failed to upload 4_khung_giờ_vàng_trong_ngày_để_học_tiếng_Anh_hiệu_quả_nhất.jpg
+2026-03-25 13:19:27,708 - __main__ - INFO - Processing new image: 4_người_tấn_công_đôi_nam_nữ_giữa_đường_ở_TPHCM.jpg
+2026-03-25 13:19:27,708 - src.android_auto - INFO - Derived title from filename: người tấn công đôi nam nữ giữa đường ở TPHCM
+2026-03-25 13:19:40,570 - src.android_auto - INFO - Transferring C:\Users\Admin\Downloads\auto-upload\temp\4_người_tấn_công_đôi_nam_nữ_giữa_đường_ở_TPHCM.jpg to device at /sdcard/Download/auto_upload_latest.jpg
+2026-03-25 13:19:40,656 - src.android_auto - INFO - Device file check: ShellResponse(output='-rw-rw---- 1 root sdcard_rw 303395 2026-03-25 13:19 /sdcard/Download/auto_upload_latest.jpg\n', exit_code=0)
+2026-03-25 13:19:40,712 - src.android_auto - INFO - Opening YouTube app...
+2026-03-25 13:19:50,885 - src.android_auto - INFO - Triggering LDPlayer macro (Ctrl+F5)...
+2026-03-25 13:19:50,885 - src.ldplayer_macro - INFO - Focusing LDPlayer window (title='LDPlayer') attempt 1/3
+2026-03-25 13:19:56,489 - src.ldplayer_macro - INFO - Sending hotkey Ctrl+F5 to LDPlayer
+2026-03-25 13:20:33,276 - __main__ - INFO - Starting Auto Upload Shorts (env-only mode)
+2026-03-25 13:20:33,276 - __main__ - INFO - Loading configuration from ENV/.env
+2026-03-25 13:20:37,669 - src.db_manager - INFO - Database initialized and connected at history.sqlite
+2026-03-25 13:20:37,670 - src.device - INFO - Connecting to Android device/emulator at 127.0.0.1:5555 (attempt 1/3)…
+2026-03-25 13:20:38,360 - src.device - WARNING - uiautomator2.healthcheck() not available; proceeded after info() ping.
+2026-03-25 13:20:38,361 - __main__ - INFO - Loaded 5 images from local dir: C:/Users/Admin/Downloads/auto-upload/temp
+2026-03-25 13:20:38,362 - __main__ - INFO - Processing new image: 4_khung_giờ_vàng_trong_ngày_để_học_tiếng_Anh_hiệu_quả_nhất.jpg
+2026-03-25 13:20:38,363 - src.android_auto - INFO - Derived title from filename: khung giờ vàng trong ngày để học tiếng Anh hiệu quả nhất
+2026-03-25 13:20:51,402 - src.android_auto - INFO - Transferring C:\Users\Admin\Downloads\auto-upload\temp\4_khung_giờ_vàng_trong_ngày_để_học_tiếng_Anh_hiệu_quả_nhất.jpg to device at /sdcard/Download/auto_upload_latest.jpg
+2026-03-25 13:20:51,509 - src.android_auto - INFO - Device file check: ShellResponse(output='-rw-rw---- 1 root sdcard_rw 391553 2026-03-25 13:20 /sdcard/Download/auto_upload_latest.jpg\n', exit_code=0)
+2026-03-25 13:20:51,548 - src.android_auto - INFO - Opening YouTube app...
+2026-03-25 13:21:01,008 - src.android_auto - INFO - Triggering LDPlayer macro (Ctrl+F5)...
+2026-03-25 13:21:01,010 - src.ldplayer_macro - INFO - Focusing LDPlayer window (title='LDPlayer') attempt 1/3
+2026-03-25 13:21:02,884 - src.ldplayer_macro - INFO - Sending hotkey Ctrl+F5 to LDPlayer
+2026-03-25 13:21:33,117 - src.android_auto - ERROR - Caption input not found after macro trigger.
+2026-03-25 13:21:33,117 - __main__ - ERROR - Failed to upload 4_khung_giờ_vàng_trong_ngày_để_học_tiếng_Anh_hiệu_quả_nhất.jpg
+2026-03-25 13:21:33,118 - __main__ - INFO - Processing new image: 4_người_tấn_công_đôi_nam_nữ_giữa_đường_ở_TPHCM.jpg
+2026-03-25 13:21:33,118 - src.android_auto - INFO - Derived title from filename: người tấn công đôi nam nữ giữa đường ở TPHCM
+2026-03-25 13:21:46,035 - src.android_auto - INFO - Transferring C:\Users\Admin\Downloads\auto-upload\temp\4_người_tấn_công_đôi_nam_nữ_giữa_đường_ở_TPHCM.jpg to device at /sdcard/Download/auto_upload_latest.jpg
+2026-03-25 13:21:46,159 - src.android_auto - INFO - Device file check: ShellResponse(output='-rw-rw---- 1 root sdcard_rw 303395 2026-03-25 13:21 /sdcard/Download/auto_upload_latest.jpg\n', exit_code=0)
+2026-03-25 13:21:46,217 - src.android_auto - INFO - Opening YouTube app...
+2026-03-25 13:21:56,019 - src.android_auto - INFO - Triggering LDPlayer macro (Ctrl+F5)...
+2026-03-25 13:21:56,019 - src.ldplayer_macro - INFO - Focusing LDPlayer window (title='LDPlayer') attempt 1/3
+2026-03-25 13:22:01,485 - src.ldplayer_macro - INFO - Sending hotkey Ctrl+F5 to LDPlayer
+2026-03-25 13:23:46,103 - __main__ - INFO - Starting Auto Upload Shorts (env-only mode)
+2026-03-25 13:23:46,103 - __main__ - INFO - Loading configuration from ENV/.env
+2026-03-25 13:23:50,997 - src.db_manager - INFO - Database initialized and connected at history.sqlite
+2026-03-25 13:23:50,997 - src.device - INFO - Connecting to Android device/emulator at 127.0.0.1:5555 (attempt 1/3)…
+2026-03-25 13:23:51,701 - src.device - WARNING - uiautomator2.healthcheck() not available; proceeded after info() ping.
+2026-03-25 13:23:51,703 - __main__ - INFO - Loaded 5 images from local dir: C:/Users/Admin/Downloads/auto-upload/temp
+2026-03-25 13:23:51,703 - __main__ - INFO - Processing new image: 4_khung_giờ_vàng_trong_ngày_để_học_tiếng_Anh_hiệu_quả_nhất.jpg
+2026-03-25 13:23:51,704 - src.android_auto - INFO - Derived title from filename: khung giờ vàng trong ngày để học tiếng Anh hiệu quả nhất
+2026-03-25 13:24:04,698 - src.android_auto - INFO - Transferring C:\Users\Admin\Downloads\auto-upload\temp\4_khung_giờ_vàng_trong_ngày_để_học_tiếng_Anh_hiệu_quả_nhất.jpg to device at /sdcard/Download/auto_upload_latest.jpg
+2026-03-25 13:24:04,787 - src.android_auto - INFO - Device file check: ShellResponse(output='-rw-rw---- 1 root sdcard_rw 391553 2026-03-25 13:24 /sdcard/Download/auto_upload_latest.jpg\n', exit_code=0)
+2026-03-25 13:24:04,835 - src.android_auto - INFO - Opening YouTube app...
+2026-03-25 13:24:14,255 - src.android_auto - INFO - Triggering LDPlayer macro (Ctrl+F5)...
+2026-03-25 13:24:14,255 - src.ldplayer_macro - INFO - Focusing LDPlayer window (title='LDPlayer') attempt 1/3
+2026-03-25 13:24:16,220 - src.ldplayer_macro - INFO - Sending hotkey Ctrl+F5 to LDPlayer
+2026-03-25 13:24:46,477 - src.android_auto - ERROR - Caption input not found after macro trigger.
+2026-03-25 13:24:46,477 - __main__ - ERROR - Failed to upload 4_khung_giờ_vàng_trong_ngày_để_học_tiếng_Anh_hiệu_quả_nhất.jpg
+2026-03-25 13:24:46,478 - __main__ - INFO - Processing new image: 4_người_tấn_công_đôi_nam_nữ_giữa_đường_ở_TPHCM.jpg
+2026-03-25 13:24:46,478 - src.android_auto - INFO - Derived title from filename: người tấn công đôi nam nữ giữa đường ở TPHCM
+2026-03-25 13:24:59,344 - src.android_auto - INFO - Transferring C:\Users\Admin\Downloads\auto-upload\temp\4_người_tấn_công_đôi_nam_nữ_giữa_đường_ở_TPHCM.jpg to device at /sdcard/Download/auto_upload_latest.jpg
+2026-03-25 13:24:59,440 - src.android_auto - INFO - Device file check: ShellResponse(output='-rw-rw---- 1 root sdcard_rw 303395 2026-03-25 13:24 /sdcard/Download/auto_upload_latest.jpg\n', exit_code=0)
+2026-03-25 13:24:59,478 - src.android_auto - INFO - Opening YouTube app...
+2026-03-25 13:25:08,967 - src.android_auto - INFO - Triggering LDPlayer macro (Ctrl+F5)...
+2026-03-25 13:25:08,967 - src.ldplayer_macro - INFO - Focusing LDPlayer window (title='LDPlayer') attempt 1/3
+2026-03-25 13:25:12,389 - src.ldplayer_macro - INFO - Sending hotkey Ctrl+F5 to LDPlayer
+2026-03-25 13:35:09,331 - __main__ - INFO - Starting Auto Upload Shorts (env-only mode)
+2026-03-25 13:35:09,332 - __main__ - INFO - Loading configuration from ENV/.env
+2026-03-25 13:35:14,264 - src.db_manager - INFO - Database initialized and connected at history.sqlite
+2026-03-25 13:35:14,265 - src.device - INFO - Connecting to Android device/emulator at 127.0.0.1:5555 (attempt 1/3)…
+2026-03-25 13:35:14,995 - src.device - WARNING - uiautomator2.healthcheck() not available; proceeded after info() ping.
+2026-03-25 13:35:14,997 - __main__ - INFO - Loaded 5 images from local dir: C:/Users/Admin/Downloads/auto-upload/temp
+2026-03-25 13:35:14,998 - __main__ - INFO - Processing new image: 4_khung_giờ_vàng_trong_ngày_để_học_tiếng_Anh_hiệu_quả_nhất.jpg
+2026-03-25 13:35:14,998 - src.android_auto - INFO - Derived title from filename: khung giờ vàng trong ngày để học tiếng Anh hiệu quả nhất
+2026-03-25 13:35:28,061 - src.android_auto - INFO - Transferring C:\Users\Admin\Downloads\auto-upload\temp\4_khung_giờ_vàng_trong_ngày_để_học_tiếng_Anh_hiệu_quả_nhất.jpg to device at /sdcard/Download/auto_upload_latest.jpg
+2026-03-25 13:35:28,152 - src.android_auto - INFO - Device file check: ShellResponse(output='-rw-rw---- 1 root sdcard_rw 391553 2026-03-25 13:35 /sdcard/Download/auto_upload_latest.jpg\n', exit_code=0)
+2026-03-25 13:35:28,196 - src.android_auto - INFO - Opening YouTube app...
+2026-03-25 13:35:37,710 - src.android_auto - INFO - Triggering LDPlayer macro (Ctrl+F5)...
+2026-03-25 13:35:37,710 - src.ldplayer_macro - INFO - Focusing LDPlayer window (title='LDPlayer') attempt 1/3
+2026-03-25 13:35:40,158 - src.ldplayer_macro - INFO - Sending hotkey Ctrl+F5 to LDPlayer
+2026-03-25 13:35:40,311 - src.android_auto - INFO - Waiting 90s for macro to finish before pasting title...
+2026-03-25 13:38:48,831 - __main__ - INFO - Starting Auto Upload Shorts (env-only mode)
+2026-03-25 13:38:48,831 - __main__ - INFO - Loading configuration from ENV/.env
+2026-03-25 13:38:53,695 - src.db_manager - INFO - Database initialized and connected at history.sqlite
+2026-03-25 13:38:53,695 - src.device - INFO - Connecting to Android device/emulator at 127.0.0.1:5555 (attempt 1/3)…
+2026-03-25 13:38:54,908 - src.device - WARNING - uiautomator2.healthcheck() not available; proceeded after info() ping.
+2026-03-25 13:38:54,910 - __main__ - INFO - Loaded 5 images from local dir: C:/Users/Admin/Downloads/auto-upload/temp
+2026-03-25 13:38:54,911 - __main__ - INFO - Processing new image: 4_khung_giờ_vàng_trong_ngày_để_học_tiếng_Anh_hiệu_quả_nhất.jpg
+2026-03-25 13:38:54,911 - src.android_auto - INFO - Derived title from filename: khung giờ vàng trong ngày để học tiếng Anh hiệu quả nhất
+2026-03-25 13:39:07,920 - src.android_auto - INFO - Transferring C:\Users\Admin\Downloads\auto-upload\temp\4_khung_giờ_vàng_trong_ngày_để_học_tiếng_Anh_hiệu_quả_nhất.jpg to device at /sdcard/Download/auto_upload_latest.jpg
+2026-03-25 13:39:08,008 - src.android_auto - INFO - Device file check: ShellResponse(output='-rw-rw---- 1 root sdcard_rw 391553 2026-03-25 13:39 /sdcard/Download/auto_upload_latest.jpg\n', exit_code=0)
+2026-03-25 13:39:08,058 - src.android_auto - INFO - Opening YouTube app...
+2026-03-25 13:39:17,530 - src.android_auto - INFO - Triggering LDPlayer macro (Ctrl+F5)...
+2026-03-25 13:39:17,531 - src.ldplayer_macro - INFO - Focusing LDPlayer window (title='LDPlayer') attempt 1/3
+2026-03-25 13:39:20,003 - src.ldplayer_macro - INFO - Sending hotkey Ctrl+F5 to LDPlayer
+2026-03-25 13:39:20,157 - src.android_auto - INFO - Waiting 90s for macro to finish before pasting title...
+2026-03-25 13:41:20,188 - src.android_auto - ERROR - Caption input not found after macro trigger.
+2026-03-25 13:41:20,189 - __main__ - ERROR - Failed to upload 4_khung_giờ_vàng_trong_ngày_để_học_tiếng_Anh_hiệu_quả_nhất.jpg
+2026-03-25 13:41:20,189 - __main__ - INFO - Processing new image: 4_người_tấn_công_đôi_nam_nữ_giữa_đường_ở_TPHCM.jpg
+2026-03-25 13:41:20,190 - src.android_auto - INFO - Derived title from filename: người tấn công đôi nam nữ giữa đường ở TPHCM
+2026-03-25 13:41:28,728 - src.android_auto - INFO - Transferring C:\Users\Admin\Downloads\auto-upload\temp\4_người_tấn_công_đôi_nam_nữ_giữa_đường_ở_TPHCM.jpg to device at /sdcard/Download/auto_upload_latest.jpg
+2026-03-25 13:41:28,824 - src.android_auto - INFO - Device file check: ShellResponse(output='-rw-rw---- 1 root sdcard_rw 303395 2026-03-25 13:41 /sdcard/Download/auto_upload_latest.jpg\n', exit_code=0)
+2026-03-25 13:41:28,865 - src.android_auto - INFO - Opening YouTube app...
+2026-03-25 13:48:24,093 - __main__ - INFO - Starting Auto Upload Shorts (env-only mode)
+2026-03-25 13:48:24,093 - __main__ - INFO - Loading configuration from ENV/.env
+2026-03-25 13:48:38,475 - __main__ - INFO - Starting Auto Upload Shorts (env-only mode)
+2026-03-25 13:48:38,475 - __main__ - INFO - Loading configuration from ENV/.env
+2026-03-25 13:48:42,775 - src.db_manager - INFO - Database initialized and connected at history.sqlite
+2026-03-25 13:48:42,776 - src.device - INFO - Connecting to Android device/emulator at 127.0.0.1:5555 (attempt 1/3)…
+2026-03-25 13:48:43,464 - src.device - WARNING - uiautomator2.healthcheck() not available; proceeded after info() ping.
+2026-03-25 13:48:43,465 - __main__ - INFO - Loaded 5 images from local dir: C:/Users/Admin/Downloads/auto-upload/temp
+2026-03-25 13:48:43,466 - __main__ - INFO - Processing new image: 4_khung_giờ_vàng_trong_ngày_để_học_tiếng_Anh_hiệu_quả_nhất.jpg
+2026-03-25 13:48:43,466 - src.android_auto - INFO - Derived title from filename: khung giờ vàng trong ngày để học tiếng Anh hiệu quả nhất
+2026-03-25 13:48:56,525 - src.android_auto - INFO - Transferring C:\Users\Admin\Downloads\auto-upload\temp\4_khung_giờ_vàng_trong_ngày_để_học_tiếng_Anh_hiệu_quả_nhất.jpg to device at /sdcard/Download/auto_upload_latest.jpg
+2026-03-25 13:48:56,625 - src.android_auto - INFO - Device file check: ShellResponse(output='-rw-rw---- 1 root sdcard_rw 391553 2026-03-25 13:48 /sdcard/Download/auto_upload_latest.jpg\n', exit_code=0)
+2026-03-25 13:48:56,675 - src.android_auto - INFO - Opening YouTube app...
+2026-03-25 13:49:06,149 - src.android_auto - INFO - Triggering LDPlayer macro (Ctrl+F5)...
+2026-03-25 13:49:06,150 - src.ldplayer_macro - INFO - Focusing LDPlayer window (title='LDPlayer') attempt 1/3
+2026-03-25 13:49:10,413 - src.ldplayer_macro - INFO - Sending hotkey Ctrl+F5 to LDPlayer
+2026-03-25 13:49:10,567 - src.android_auto - INFO - Waiting 60s for macro to finish before pasting title...
+2026-03-25 13:50:13,285 - src.android_auto - INFO - Waiting for upload to finish (up to 60s)...
+2026-03-25 13:51:18,204 - src.android_auto - WARNING - Dumped UI to ui_dump_upload_timeout.xml for debugging
+2026-03-25 13:51:18,204 - src.android_auto - INFO - No explicit success indicator detected; verifying via Drafts list...
+2026-03-25 13:51:26,723 - src.android_auto - WARNING - Did not detect Upload success indicator within timeout.
+2026-03-25 13:51:26,723 - __main__ - ERROR - Failed to upload 4_khung_giờ_vàng_trong_ngày_để_học_tiếng_Anh_hiệu_quả_nhất.jpg
+2026-03-25 13:51:26,724 - __main__ - INFO - Processing new image: 4_người_tấn_công_đôi_nam_nữ_giữa_đường_ở_TPHCM.jpg
+2026-03-25 13:51:26,724 - src.android_auto - INFO - Derived title from filename: người tấn công đôi nam nữ giữa đường ở TPHCM
+2026-03-25 13:51:35,269 - src.android_auto - INFO - Transferring C:\Users\Admin\Downloads\auto-upload\temp\4_người_tấn_công_đôi_nam_nữ_giữa_đường_ở_TPHCM.jpg to device at /sdcard/Download/auto_upload_latest.jpg
+2026-03-25 13:51:35,357 - src.android_auto - INFO - Device file check: ShellResponse(output='-rw-rw---- 1 root sdcard_rw 303395 2026-03-25 13:51 /sdcard/Download/auto_upload_latest.jpg\n', exit_code=0)
+2026-03-25 13:51:35,406 - src.android_auto - INFO - Opening YouTube app...
+2026-03-25 13:51:44,831 - src.android_auto - INFO - Triggering LDPlayer macro (Ctrl+F5)...
+2026-03-25 13:51:44,831 - src.ldplayer_macro - INFO - Focusing LDPlayer window (title='LDPlayer') attempt 1/3
+2026-03-25 13:51:47,669 - src.ldplayer_macro - INFO - Sending hotkey Ctrl+F5 to LDPlayer
+2026-03-25 13:51:47,823 - src.android_auto - INFO - Waiting 60s for macro to finish before pasting title...
+2026-03-25 13:52:50,485 - src.android_auto - INFO - Waiting for upload to finish (up to 60s)...
+2026-03-25 13:54:38,999 - __main__ - INFO - Starting Auto Upload Shorts (env-only mode)
+2026-03-25 13:54:39,000 - __main__ - INFO - Loading configuration from ENV/.env
+2026-03-25 13:54:43,333 - src.db_manager - INFO - Database initialized and connected at history.sqlite
+2026-03-25 13:54:43,333 - src.device - INFO - Connecting to Android device/emulator at 127.0.0.1:5555 (attempt 1/3)…
+2026-03-25 13:54:44,016 - src.device - WARNING - uiautomator2.healthcheck() not available; proceeded after info() ping.
+2026-03-25 13:54:44,017 - __main__ - INFO - Loaded 5 images from local dir: C:/Users/Admin/Downloads/auto-upload/temp
+2026-03-25 13:54:44,018 - __main__ - INFO - Processing new image: 4_khung_giờ_vàng_trong_ngày_để_học_tiếng_Anh_hiệu_quả_nhất.jpg
+2026-03-25 13:54:44,019 - src.android_auto - INFO - Derived title from filename: khung giờ vàng trong ngày để học tiếng Anh hiệu quả nhất
+2026-03-25 13:54:57,062 - src.android_auto - INFO - Transferring C:\Users\Admin\Downloads\auto-upload\temp\4_khung_giờ_vàng_trong_ngày_để_học_tiếng_Anh_hiệu_quả_nhất.jpg to device at /sdcard/Download/auto_upload_latest.jpg
+2026-03-25 13:54:57,439 - src.android_auto - INFO - Device file check: ShellResponse(output='-rw-rw---- 1 root sdcard_rw 391553 2026-03-25 13:54 /sdcard/Download/auto_upload_latest.jpg\n', exit_code=0)
+2026-03-25 13:54:57,479 - src.android_auto - INFO - Opening YouTube app...
+2026-03-25 13:55:06,912 - src.android_auto - INFO - Triggering LDPlayer macro (Ctrl+F5)...
+2026-03-25 13:55:06,915 - src.ldplayer_macro - INFO - Focusing LDPlayer window (title='LDPlayer') attempt 1/3
+2026-03-25 13:55:08,857 - src.ldplayer_macro - INFO - Sending hotkey Ctrl+F5 to LDPlayer
+2026-03-25 13:55:09,011 - src.android_auto - INFO - Waiting 60s for macro to finish before pasting title...
+2026-03-25 13:56:15,848 - src.android_auto - ERROR - Could not find Upload button after title paste.
+2026-03-25 13:56:15,849 - __main__ - ERROR - Failed to upload 4_khung_giờ_vàng_trong_ngày_để_học_tiếng_Anh_hiệu_quả_nhất.jpg
+2026-03-25 13:56:15,850 - __main__ - INFO - Processing new image: 4_người_tấn_công_đôi_nam_nữ_giữa_đường_ở_TPHCM.jpg
+2026-03-25 13:56:15,850 - src.android_auto - INFO - Derived title from filename: người tấn công đôi nam nữ giữa đường ở TPHCM
+2026-03-25 13:56:24,423 - src.android_auto - INFO - Transferring C:\Users\Admin\Downloads\auto-upload\temp\4_người_tấn_công_đôi_nam_nữ_giữa_đường_ở_TPHCM.jpg to device at /sdcard/Download/auto_upload_latest.jpg
+2026-03-25 13:56:24,526 - src.android_auto - INFO - Device file check: ShellResponse(output='-rw-rw---- 1 root sdcard_rw 303395 2026-03-25 13:56 /sdcard/Download/auto_upload_latest.jpg\n', exit_code=0)
+2026-03-25 13:56:24,575 - src.android_auto - INFO - Opening YouTube app...
+2026-03-25 13:59:57,362 - __main__ - INFO - Starting Auto Upload Shorts (env-only mode)
+2026-03-25 13:59:57,362 - __main__ - INFO - Loading configuration from ENV/.env
+2026-03-25 14:00:02,419 - src.db_manager - INFO - Database initialized and connected at history.sqlite
+2026-03-25 14:00:02,420 - src.device - INFO - Connecting to Android device/emulator at 127.0.0.1:5555 (attempt 1/3)…
+2026-03-25 14:00:03,098 - src.device - WARNING - uiautomator2.healthcheck() not available; proceeded after info() ping.
+2026-03-25 14:00:03,099 - __main__ - INFO - Loaded 5 images from local dir: C:/Users/Admin/Downloads/auto-upload/temp
+2026-03-25 14:00:03,100 - __main__ - INFO - Processing new image: 4_khung_giờ_vàng_trong_ngày_để_học_tiếng_Anh_hiệu_quả_nhất.jpg
+2026-03-25 14:00:03,100 - src.android_auto - INFO - Derived title from filename: khung giờ vàng trong ngày để học tiếng Anh hiệu quả nhất
+2026-03-25 14:00:13,580 - src.android_auto - INFO - Transferring C:\Users\Admin\Downloads\auto-upload\temp\4_khung_giờ_vàng_trong_ngày_để_học_tiếng_Anh_hiệu_quả_nhất.jpg to device at /sdcard/Download/auto_upload_latest.jpg
+2026-03-25 14:00:13,783 - src.android_auto - INFO - Device file check: ShellResponse(output='-rw-rw---- 1 root sdcard_rw 391553 2026-03-25 14:00 /sdcard/Download/auto_upload_latest.jpg\n', exit_code=0)
+2026-03-25 14:00:13,834 - src.android_auto - INFO - Opening YouTube app...
+2026-03-25 14:00:23,459 - src.android_auto - INFO - Triggering LDPlayer macro (Ctrl+F5)...
+2026-03-25 14:00:23,459 - src.ldplayer_macro - INFO - Focusing LDPlayer window (title='LDPlayer') attempt 1/3
+2026-03-25 14:00:27,843 - src.ldplayer_macro - INFO - Sending hotkey Ctrl+F5 to LDPlayer
+2026-03-25 14:00:27,997 - src.android_auto - INFO - Waiting 60s for macro to finish before pasting title...
+2026-03-25 14:01:53,481 - src.android_auto - WARNING - Dumped UI to ui_dump_upload_button_not_found.xml for debugging
+2026-03-25 14:01:53,482 - src.android_auto - ERROR - Could not find Upload button after title paste.
+2026-03-25 14:01:53,482 - __main__ - ERROR - Failed to upload 4_khung_giờ_vàng_trong_ngày_để_học_tiếng_Anh_hiệu_quả_nhất.jpg
+2026-03-25 14:01:53,483 - __main__ - INFO - Processing new image: 4_người_tấn_công_đôi_nam_nữ_giữa_đường_ở_TPHCM.jpg
+2026-03-25 14:01:53,483 - src.android_auto - INFO - Derived title from filename: người tấn công đôi nam nữ giữa đường ở TPHCM
+2026-03-25 14:04:28,410 - __main__ - INFO - Starting Auto Upload Shorts (env-only mode)
+2026-03-25 14:04:28,411 - __main__ - INFO - Loading configuration from ENV/.env
+2026-03-25 14:04:33,208 - src.db_manager - INFO - Database initialized and connected at history.sqlite
+2026-03-25 14:04:33,209 - src.device - INFO - Connecting to Android device/emulator at 127.0.0.1:5555 (attempt 1/3)…
+2026-03-25 14:04:33,898 - src.device - WARNING - uiautomator2.healthcheck() not available; proceeded after info() ping.
+2026-03-25 14:04:33,899 - __main__ - INFO - Loaded 5 images from local dir: C:/Users/Admin/Downloads/auto-upload/temp
+2026-03-25 14:04:33,900 - __main__ - INFO - Processing new image: 4_khung_giờ_vàng_trong_ngày_để_học_tiếng_Anh_hiệu_quả_nhất.jpg
+2026-03-25 14:04:33,901 - src.android_auto - INFO - Derived title from filename: khung giờ vàng trong ngày để học tiếng Anh hiệu quả nhất
+2026-03-25 14:04:46,958 - src.android_auto - INFO - Transferring C:\Users\Admin\Downloads\auto-upload\temp\4_khung_giờ_vàng_trong_ngày_để_học_tiếng_Anh_hiệu_quả_nhất.jpg to device at /sdcard/Download/auto_upload_latest.jpg
+2026-03-25 14:04:47,044 - src.android_auto - INFO - Device file check: ShellResponse(output='-rw-rw---- 1 root sdcard_rw 391553 2026-03-25 14:04 /sdcard/Download/auto_upload_latest.jpg\n', exit_code=0)
+2026-03-25 14:04:47,083 - src.android_auto - INFO - Opening YouTube app...
+2026-03-25 14:04:56,467 - src.android_auto - INFO - Triggering LDPlayer macro (Ctrl+F5)...
+2026-03-25 14:04:56,468 - src.ldplayer_macro - INFO - Focusing LDPlayer window (title='LDPlayer') attempt 1/3
+2026-03-25 14:04:58,429 - src.ldplayer_macro - INFO - Sending hotkey Ctrl+F5 to LDPlayer
+2026-03-25 14:04:58,584 - src.android_auto - INFO - Waiting 60s for macro to finish before pasting title...
+2026-03-25 14:06:01,354 - src.android_auto - INFO - Waiting for upload to finish (up to 60s)...
+2026-03-25 14:06:28,327 - src.android_auto - INFO - Upload Successful!
+2026-03-25 14:06:28,372 - src.db_manager - INFO - Successfully tracked upload for hash: 06c54464dfca5e5cb6cdd6f272ee043ed22960a777b66fb6ff84e583755653fe
+2026-03-25 14:06:28,373 - __main__ - INFO - Cleaned up local file: 4_khung_giờ_vàng_trong_ngày_để_học_tiếng_Anh_hiệu_quả_nhất.jpg
+2026-03-25 14:06:28,374 - __main__ - INFO - Processing new image: 4_người_tấn_công_đôi_nam_nữ_giữa_đường_ở_TPHCM.jpg
+2026-03-25 14:06:28,375 - src.android_auto - INFO - Derived title from filename: người tấn công đôi nam nữ giữa đường ở TPHCM
+2026-03-25 14:06:41,431 - src.android_auto - INFO - Transferring C:\Users\Admin\Downloads\auto-upload\temp\4_người_tấn_công_đôi_nam_nữ_giữa_đường_ở_TPHCM.jpg to device at /sdcard/Download/auto_upload_latest.jpg
+2026-03-25 14:06:41,819 - src.android_auto - INFO - Device file check: ShellResponse(output='-rw-rw---- 1 root sdcard_rw 303395 2026-03-25 14:06 /sdcard/Download/auto_upload_latest.jpg\n', exit_code=0)
+2026-03-25 14:06:41,871 - src.android_auto - INFO - Opening YouTube app...
+2026-03-25 14:06:51,313 - src.android_auto - INFO - Triggering LDPlayer macro (Ctrl+F5)...
+2026-03-25 14:06:51,313 - src.ldplayer_macro - INFO - Focusing LDPlayer window (title='LDPlayer') attempt 1/3
+2026-03-25 14:06:55,419 - src.ldplayer_macro - INFO - Sending hotkey Ctrl+F5 to LDPlayer
+2026-03-25 14:06:55,572 - src.android_auto - INFO - Waiting 60s for macro to finish before pasting title...
+2026-03-25 14:07:58,448 - src.android_auto - INFO - Waiting for upload to finish (up to 60s)...
+2026-03-25 14:08:59,885 - src.android_auto - WARNING - Dumped UI to ui_dump_upload_timeout.xml for debugging
+2026-03-25 14:08:59,886 - src.android_auto - INFO - No explicit success indicator detected; verifying via Drafts list...
+2026-03-25 14:09:13,902 - src.android_auto - WARNING - Did not detect Upload success indicator within timeout.
+2026-03-25 14:09:13,903 - __main__ - ERROR - Failed to upload 4_người_tấn_công_đôi_nam_nữ_giữa_đường_ở_TPHCM.jpg
+2026-03-25 14:09:13,904 - __main__ - INFO - Processing new image: 4_phương_pháp_điều_trị_rò_hậu_môn.jpg
+2026-03-25 14:09:13,904 - src.android_auto - INFO - Derived title from filename: phương pháp điều trị rò hậu môn
+2026-03-25 14:09:27,974 - src.android_auto - INFO - Transferring C:\Users\Admin\Downloads\auto-upload\temp\4_phương_pháp_điều_trị_rò_hậu_môn.jpg to device at /sdcard/Download/auto_upload_latest.jpg
+2026-03-25 14:09:28,372 - src.android_auto - INFO - Device file check: ShellResponse(output='-rw-rw---- 1 root sdcard_rw 353493 2026-03-25 14:09 /sdcard/Download/auto_upload_latest.jpg\n', exit_code=0)
+2026-03-25 14:09:28,418 - src.android_auto - INFO - Opening YouTube app...
+2026-03-25 14:09:37,862 - src.android_auto - INFO - Triggering LDPlayer macro (Ctrl+F5)...
+2026-03-25 14:09:37,862 - src.ldplayer_macro - INFO - Focusing LDPlayer window (title='LDPlayer') attempt 1/3
+2026-03-25 14:09:39,816 - src.ldplayer_macro - INFO - Sending hotkey Ctrl+F5 to LDPlayer
+2026-03-25 14:09:39,971 - src.android_auto - INFO - Waiting 60s for macro to finish before pasting title...
+2026-03-25 14:10:42,755 - src.android_auto - INFO - Waiting for upload to finish (up to 60s)...
+2026-03-25 14:11:23,128 - __main__ - INFO - Starting Auto Upload Shorts (env-only mode)
+2026-03-25 14:11:23,128 - __main__ - INFO - Loading configuration from ENV/.env
+2026-03-25 14:11:28,068 - src.db_manager - INFO - Database initialized and connected at history.sqlite
+2026-03-25 14:11:28,068 - src.device - INFO - Connecting to Android device/emulator at 127.0.0.1:5555 (attempt 1/3)…
+2026-03-25 14:11:28,746 - src.device - WARNING - uiautomator2.healthcheck() not available; proceeded after info() ping.
+2026-03-25 14:11:28,748 - __main__ - INFO - Loaded 5 images from local dir: C:/Users/Admin/Downloads/auto-upload/temp
+2026-03-25 14:11:28,748 - __main__ - INFO - Processing new image: 4_người_tấn_công_đôi_nam_nữ_giữa_đường_ở_TPHCM.jpg
+2026-03-25 14:11:28,749 - src.android_auto - INFO - Derived title from filename: người tấn công đôi nam nữ giữa đường ở TPHCM
+2026-03-25 14:11:42,844 - src.android_auto - INFO - Transferring C:\Users\Admin\Downloads\auto-upload\temp\4_người_tấn_công_đôi_nam_nữ_giữa_đường_ở_TPHCM.jpg to device at /sdcard/Download/auto_upload_latest.jpg
+2026-03-25 14:11:42,932 - src.android_auto - INFO - Device file check: ShellResponse(output='-rw-rw---- 1 root sdcard_rw 303395 2026-03-25 14:11 /sdcard/Download/auto_upload_latest.jpg\n', exit_code=0)
+2026-03-25 14:11:42,982 - src.android_auto - INFO - Opening YouTube app...
+2026-03-25 14:11:52,338 - src.android_auto - INFO - Triggering LDPlayer macro (Ctrl+F5)...
+2026-03-25 14:11:52,339 - src.ldplayer_macro - INFO - Focusing LDPlayer window (title='LDPlayer') attempt 1/3
+2026-03-25 14:11:56,896 - src.ldplayer_macro - INFO - Sending hotkey Ctrl+F5 to LDPlayer
+2026-03-25 14:11:57,049 - src.android_auto - INFO - Waiting 70s for macro to finish before pasting title...
+2026-03-25 14:13:09,853 - src.android_auto - INFO - Waiting for upload to finish (up to 70s)...
+2026-03-25 14:18:43,961 - __main__ - INFO - Starting Auto Upload Shorts (env-only mode)
+2026-03-25 14:18:43,961 - __main__ - INFO - Loading configuration from ENV/.env
+2026-03-25 14:18:48,832 - src.db_manager - INFO - Database initialized and connected at history.sqlite
+2026-03-25 14:18:48,833 - src.device - INFO - Connecting to Android device/emulator at 127.0.0.1:5555 (attempt 1/3)…
+2026-03-25 14:18:49,525 - src.device - WARNING - uiautomator2.healthcheck() not available; proceeded after info() ping.
+2026-03-25 14:18:49,527 - __main__ - INFO - Loaded 5 images from local dir: C:/Users/Admin/Downloads/auto-upload/temp
+2026-03-25 14:18:49,527 - __main__ - INFO - Processing new image: 4_người_tấn_công_đôi_nam_nữ_giữa_đường_ở_TPHCM.jpg
+2026-03-25 14:18:49,528 - src.android_auto - INFO - Derived title from filename: người tấn công đôi nam nữ giữa đường ở TPHCM
+2026-03-25 14:19:03,642 - src.android_auto - INFO - Transferring C:\Users\Admin\Downloads\auto-upload\temp\4_người_tấn_công_đôi_nam_nữ_giữa_đường_ở_TPHCM.jpg to device at /sdcard/Download/auto_upload_latest.jpg
+2026-03-25 14:19:03,729 - src.android_auto - INFO - Device file check: ShellResponse(output='-rw-rw---- 1 root sdcard_rw 303395 2026-03-25 14:19 /sdcard/Download/auto_upload_latest.jpg\n', exit_code=0)
+2026-03-25 14:19:03,769 - src.android_auto - INFO - Opening YouTube app...
+2026-03-25 14:19:13,151 - src.android_auto - INFO - Triggering LDPlayer macro (Ctrl+F5)...
+2026-03-25 14:19:13,151 - src.ldplayer_macro - INFO - Focusing LDPlayer window (title='LDPlayer') attempt 1/3
+2026-03-25 14:19:15,043 - src.ldplayer_macro - INFO - Sending hotkey Ctrl+F5 to LDPlayer
+2026-03-25 14:19:15,198 - src.android_auto - INFO - Waiting 70s for macro to finish before pasting title...
+2026-03-25 14:20:28,015 - src.android_auto - INFO - Waiting for upload to finish (up to 70s)...
+2026-03-25 14:20:54,931 - src.android_auto - INFO - Upload Successful!
+2026-03-25 14:20:54,962 - src.db_manager - INFO - Successfully tracked upload for hash: b5f297e9133056e20658c005fd5cade44cc287d64cfe3778a608ba31fbf649d7
+2026-03-25 14:20:54,962 - __main__ - INFO - Cleaned up local file: 4_người_tấn_công_đôi_nam_nữ_giữa_đường_ở_TPHCM.jpg
+2026-03-25 14:20:54,963 - __main__ - INFO - Processing new image: 4_phương_pháp_điều_trị_rò_hậu_môn.jpg
+2026-03-25 14:20:54,963 - src.android_auto - INFO - Derived title from filename: phương pháp điều trị rò hậu môn
+2026-03-25 14:21:08,040 - src.android_auto - INFO - Transferring C:\Users\Admin\Downloads\auto-upload\temp\4_phương_pháp_điều_trị_rò_hậu_môn.jpg to device at /sdcard/Download/auto_upload_latest.jpg
+2026-03-25 14:21:08,138 - src.android_auto - INFO - Device file check: ShellResponse(output='-rw-rw---- 1 root sdcard_rw 353493 2026-03-25 14:21 /sdcard/Download/auto_upload_latest.jpg\n', exit_code=0)
+2026-03-25 14:21:08,182 - src.android_auto - INFO - Opening YouTube app...
+2026-03-25 14:21:17,625 - src.android_auto - INFO - Triggering LDPlayer macro (Ctrl+F5)...
+2026-03-25 14:21:17,625 - src.ldplayer_macro - INFO - Focusing LDPlayer window (title='LDPlayer') attempt 1/3
+2026-03-25 14:21:19,540 - src.ldplayer_macro - INFO - Sending hotkey Ctrl+F5 to LDPlayer
+2026-03-25 14:21:19,694 - src.android_auto - INFO - Waiting 70s for macro to finish before pasting title...
+2026-03-25 14:22:32,560 - src.android_auto - INFO - Waiting for upload to finish (up to 70s)...
+2026-04-07 10:40:27,960 - __main__ - INFO - Starting Auto Upload Shorts (env-only mode)
+2026-04-07 10:40:27,961 - __main__ - INFO - Loading configuration from ENV/.env
+2026-04-07 10:40:32,964 - __main__ - ERROR - LDPlayer window is not ready/focusable (title='LDPlayer'): LDPlayer window not found (title or contains): LDPlayer
+2026-04-07 10:40:32,964 - __main__ - ERROR - Please open LDPlayer (and keep its window visible) before running.
+2026-04-07 10:41:13,451 - __main__ - INFO - Starting Auto Upload Shorts (env-only mode)
+2026-04-07 10:41:13,459 - __main__ - INFO - Loading configuration from ENV/.env
+2026-04-07 10:41:38,284 - src.db_manager - INFO - Database initialized and connected at history.sqlite
+2026-04-07 10:41:38,284 - src.device - INFO - Connecting to Android device/emulator at 127.0.0.1:5555 (attempt 1/3)…
